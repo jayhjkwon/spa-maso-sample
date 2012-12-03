@@ -1,0 +1,35 @@
+{
+    "author": {
+        "name": "Steven Sanderson",
+        "url": "https://github.com/SteveSanderson"
+    },
+    "name": "knockout.mapping",
+    "licenses": [
+        {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+    ],
+    "description": "The mapping plugin gives you a straightforward way to map plain JavaScript objects into a view model with the appropriate Knockout observables. This is an alternative to manually writing your own JavaScript code that constructs a view model based on some data you've fetched from the server.",
+    "keywords": [
+        "knockout",
+        "knockoutjs",
+        "mvvm",
+        "mapping"
+    ],
+    "homepage": "http://knockoutjs.com/",
+    "url": "https://github.com/SteveSanderson/knockout.mapping",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SteveSanderson/knockout.mapping.git"
+    },
+    "main": "knockout.mapping.js",
+    "version": "2.3.2",
+    "readme": "An up-to-date jam package for the KnockoutJS Mapping plugin",
+    "categories": ["Utilities"],
+    "jam":{
+        "dependencies":{
+            "knockout":">2.0.0"
+        }
+    }
+}

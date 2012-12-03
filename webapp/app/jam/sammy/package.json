@@ -1,0 +1,15 @@
+{
+  "name": "sammy",
+  "version": "0.6.3",
+  "maintainers": [{"name":"Aaron Quint", "web": "http://www.quirkey.com"}],
+  "description": "Sammy is a RESTful Evented JavaScript framework built on top of jQuery",
+  "keywords": ["framework", "jquery", "sammy"],
+  "licenses": [{"type": "MIT", "url": "http://www.opensource.org/licenses/mit-license.php"}],
+  "homepage": "http://code.quirkey.com/sammy",
+  "main": "sammy.js",
+  "jam":{
+        "dependencies":{
+            "jquery":">1.4.1"
+        }
+    }
+}
