@@ -1,0 +1,19 @@
+﻿<section id="patient-div" class="view">
+    <h2>Patient</h2>
+
+    <form data-bind="validatePatient: {}" id="patientForm">
+        <fieldset>
+            <div>
+                <label for="firstName">First Name</label>
+                <input data-bind='value: firstName'  name="firstName" type="text" >
+            </div>
+            <div>
+                <label for="lastName">Last Name</label>
+                <input data-bind='value: lastName'  name="lastName" type="text">
+            </div>
+        </fieldset>
+        <button id="btnSave" data-bind="click: savePatient">Save</button>
+        <button data-bind="click: goToDocument">Go to Document View</button>
+    </form>
+
+</section>

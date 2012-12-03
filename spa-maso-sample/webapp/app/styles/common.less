@@ -1,0 +1,50 @@
+/* Common styles
+-----------------------------------------------------------*/
+
+body {
+  .font;
+  overflow: hidden;
+}
+
+.view {
+/*position: relative;*/
+  display: none;
+}
+
+.active-view {
+  display: inline;
+}
+
+
+/* busy indicator */
+.modal {
+  position  : fixed;
+  z-index   : 1000;
+  top       : 0;
+  left      : 0;
+  right     : 0;
+  bottom    : 0;
+  background: rgba( 0, 0, 0, .1 ) url(../images/ajax-loader-5.gif) 50% 50% no-repeat;
+  cursor    : wait;
+}
+/* end - busy indicator */
+
+/* validation style */
+label.valid {
+  width      : 24px;
+  height     : 24px;
+  background : url(../images/valid.png) center center no-repeat;
+  display    : inline-block;
+  text-indent: -9999px;
+}
+label.error {
+  font-weight: bold;
+  color      : red;
+  padding    : 2px 8px;
+  margin-top : 2px;
+}
+/* end - validation style */
+
+label{
+  
+}

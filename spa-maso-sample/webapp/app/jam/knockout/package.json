@@ -1,0 +1,29 @@
+{
+    "author": {
+        "name": "Steven Sanderson",
+        "url": "https://github.com/SteveSanderson"
+    },
+    "name": "knockout",
+    "licenses": [
+        {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+    ],
+    "description": "A JavaScript MVVM library to help you create rich, dynamic user interfaces with clean maintainable code",
+    "keywords": [
+        "knockout",
+        "knockoutjs",
+        "mvvm"
+    ],
+    "homepage": "http://knockoutjs.com/",
+    "url": "https://github.com/SteveSanderson/knockout/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SteveSanderson/knockout.git"
+    },
+    "main": "knockout.js",
+    "version": "2.2.0",
+    "readme": "An jam package for the KnockoutJS",
+    "categories": ["Frameworks", "DOM"]
+}

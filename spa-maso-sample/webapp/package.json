@@ -1,0 +1,11 @@
+{
+    "name":"webapp",
+    "version":"0.0.1",
+    "main":"index.html",
+    "author":"Kwon",
+    "license":"MIT",
+    "jam":{
+        "packageDir" : "app/jam",
+        "baseUrl" : "app"
+    }
+}

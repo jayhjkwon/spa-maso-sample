@@ -1,0 +1,1181 @@
+{
+    "project": {},
+    "files": {
+        "app\\data\\data.js": {
+            "name": "app\\data\\data.js",
+            "modules": {},
+            "classes": {
+                "data": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "app\\jam\\domReady\\domReady.js": {
+            "name": "app\\jam\\domReady\\domReady.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app\\jam\\jquery\\jquery.js": {
+            "name": "app\\jam\\jquery\\jquery.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app\\jam\\jqueryui\\jquery-ui-1.8.23.js": {
+            "name": "app\\jam\\jqueryui\\jquery-ui-1.8.23.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app\\jam\\koActivity\\knockout.activity.js": {
+            "name": "app\\jam\\koActivity\\knockout.activity.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app\\jam\\test\\test-0.0.1.js": {
+            "name": "app\\jam\\test\\test-0.0.1.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app\\jam\\text\\text.js": {
+            "name": "app\\jam\\text\\text.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app\\jam\\require.js": {
+            "name": "app\\jam\\require.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app\\vms\\vm.js": {
+            "name": "app\\vms\\vm.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app\\app.min.js": {
+            "name": "app\\app.min.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "data": {
+            "name": "data",
+            "shortname": "data",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "app\\data\\data.js",
+            "line": 1,
+            "description": "data context for the data modules",
+            "is_constructor": 1
+        }
+    },
+    "classitems": [
+        {
+            "file": "app\\data\\data.js",
+            "line": 12,
+            "description": "test property",
+            "itemtype": "property",
+            "name": "test",
+            "type": "{String}",
+            "default": "\"test\"",
+            "class": "data"
+        },
+        {
+            "file": "app\\data\\data.js",
+            "line": 21,
+            "description": "Wrapper method for amplify define methods\nimplements jQuery Deferred Object",
+            "itemtype": "method",
+            "name": "deferredRequest",
+            "params": [
+                {
+                    "name": "resourceId",
+                    "description": "resourceId of each amplify definitions",
+                    "type": "String"
+                },
+                {
+                    "name": "data",
+                    "description": "parameter to pass ajax method",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "jQuery Deferred Object with its result",
+                "type": "Object"
+            },
+            "class": "data"
+        },
+        {
+            "file": "app\\jam\\domReady\\domReady.js",
+            "line": 1,
+            "license": "RequireJS domReady 2.0.1 Copyright (c) 2010-2012, The Dojo Foundation All Rights Reserved.\nAvailable via the MIT or new BSD license.\nsee: http://github.com/requirejs/domReady for details",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\domReady\\domReady.js",
+            "line": 40,
+            "description": "Sets the page as loaded.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\domReady\\domReady.js",
+            "line": 97,
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\domReady\\domReady.js",
+            "line": 99,
+            "description": "Registers a callback for DOM ready. If DOM is already ready, the\ncallback is called immediately.",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\domReady\\domReady.js",
+            "line": 115,
+            "description": "Loader Plugin API method",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\domReady\\domReady.js",
+            "line": 126,
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\jquery\\jquery.js",
+            "line": 4453,
+            "description": "Utility function for retrieving the text value of an array of DOM nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "",
+                    "type": "Array|Element"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\jqueryui\\jquery-ui-1.8.23.js",
+            "line": 3979,
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\jqueryui\\jquery-ui-1.8.23.js",
+            "line": 3980,
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\jqueryui\\jquery-ui-1.8.23.js",
+            "line": 3981,
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\jqueryui\\jquery-ui-1.8.23.js",
+            "line": 4107,
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\jqueryui\\jquery-ui-1.8.23.js",
+            "line": 4108,
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\jqueryui\\jquery-ui-1.8.23.js",
+            "line": 4109,
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\jqueryui\\jquery-ui-1.8.23.js",
+            "line": 4268,
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\jqueryui\\jquery-ui-1.8.23.js",
+            "line": 4269,
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\jqueryui\\jquery-ui-1.8.23.js",
+            "line": 4270,
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\jqueryui\\jquery-ui-1.8.23.js",
+            "line": 4526,
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\jqueryui\\jquery-ui-1.8.23.js",
+            "line": 4527,
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\jqueryui\\jquery-ui-1.8.23.js",
+            "line": 4528,
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\koActivity\\knockout.activity.js",
+            "line": 20,
+            "description": "Plugin that renders a customisable activity indicator (spinner) using SVG or VML.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\koActivity\\knockout.activity.js",
+            "line": 77,
+            "description": "Default rendering strategy. If neither SVG nor VML is available, a div with class-name 'busy' \nis inserted, that can be styled with CSS to display an animated gif as fallback.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\koActivity\\knockout.activity.js",
+            "line": 85,
+            "description": "The default animation strategy does nothing as we expect an animated gif as fallback.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\koActivity\\knockout.activity.js",
+            "line": 91,
+            "description": "Utility function to create elements in the SVG namespace.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\koActivity\\knockout.activity.js",
+            "line": 110,
+            "description": "Rendering strategy that creates a SVG tree.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\koActivity\\knockout.activity.js",
+            "line": 145,
+            "description": "Animation strategy that uses dynamically created CSS animation rules.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\koActivity\\knockout.activity.js",
+            "line": 167,
+            "description": "Animation strategy that transforms a SVG element using setInterval().",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\koActivity\\knockout.activity.js",
+            "line": 198,
+            "description": "Rendering strategy that creates a VML tree.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\koActivity\\knockout.activity.js",
+            "line": 219,
+            "description": "Animation strategy that modifies the VML rotation property using setInterval().",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\test\\test-0.0.1.js",
+            "line": 1,
+            "description": "Created with JetBrains WebStorm.\nUser: 305024278\nDate: 12. 10. 22\nTime: 오전 11:08\nTo change this template use File | Settings | File Templates.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\text\\text.js",
+            "line": 1,
+            "license": "RequireJS text 2.0.2+ Copyright (c) 2010-2012, The Dojo Foundation All Rights Reserved.\nAvailable via the MIT or new BSD license.\nsee: http://github.com/requirejs/text for details",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\text\\text.js",
+            "line": 77,
+            "description": "Parses a resource name into its component parts. Resource names\nlook like: module/name.ext!strip, where the !strip part is\noptional.",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "the resource name",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "with properties \"moduleName\", \"ext\" and \"strip\"\nwhere strip is a boolean.",
+                "type": "Object"
+            },
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\text\\text.js",
+            "line": 107,
+            "description": "Is an URL on another domain. Only works for browser use, returns\nfalse in non-browser environments. Only used to know if an\noptimized .js version of a text resource should be loaded\ninstead.",
+            "params": [
+                {
+                    "name": "url",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Boolean"
+            },
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1,
+            "license": "RequireJS 2.0.6 Copyright (c) 2010-2012, The Dojo Foundation All Rights Reserved.\nAvailable via the MIT or new BSD license.\nsee: http://github.com/jrburke/requirejs for details",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 50,
+            "description": "Helper function for iterating over an array. If the func returns\na true value, it will break out of the loop.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 65,
+            "description": "Helper function for iterating over an array backwards. If the func\nreturns a true value, it will break out of the loop.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 84,
+            "description": "Cycles over properties in an object and calls a function for each\nproperty value. If the function returns a truthy value, then the\niteration is stopped.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 100,
+            "description": "Simple function to mix in properties from source into target,\nbut only if target does not already have a property of the same name.\nThis is not robust in IE for transferring methods that match\nObject.prototype names, but the uses of mixin here seem unlikely to\ntrigger a problem related to that.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 185,
+            "description": "Constructs an error with a pointer to an URL with more information.",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "the error ID that maps to an ID on a web page.",
+                    "type": "String"
+                },
+                {
+                    "name": "message",
+                    "description": "human readable error.",
+                    "type": "String"
+                },
+                {
+                    "name": "err",
+                    "description": "the original error, if there is one.",
+                    "type": "Error",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Error"
+            },
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 248,
+            "description": "Trims the . and .. from an array of path segments.\nIt will keep a leading path segment if a .. will become\nthe first path segment, to help with module name lookups,\nwhich act like paths, but can be remapped. But the end result,\nall paths that use this function should look normalized.\nNOTE: this method MODIFIES the input array.",
+            "params": [
+                {
+                    "name": "ary",
+                    "description": "the array of path segments.",
+                    "type": "Array"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 281,
+            "description": "Given a relative module name, like ./something, normalize it to\na real name that can be mapped to a path.",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "the relative name",
+                    "type": "String"
+                },
+                {
+                    "name": "baseName",
+                    "description": "a real name that the name arg is relative\nto.",
+                    "type": "String"
+                },
+                {
+                    "name": "applyMap",
+                    "description": "apply the map config to the value. Should\nonly be done if this normalization is for a dependency ID.",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "normalized name",
+                "type": "String"
+            },
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 414,
+            "description": "Creates a module mapping that includes plugin prefix, module\nname, and path. If parentModuleMap is provided it will\nalso normalize the name via require.normalize()",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "the module name",
+                    "type": "String"
+                },
+                {
+                    "name": "parentModuleMap",
+                    "description": "parent module map\nfor the module name, used to resolve relative names.",
+                    "type": "String",
+                    "optional": true
+                },
+                {
+                    "name": "isNormalized:",
+                    "description": "is the ID already normalized.\nThis is true if this call is done for a define() module ID.",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "applyMap:",
+                    "description": "apply the map config to the ID.\nShould only be true if this map is for a dependency.",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 544,
+            "description": "Internal method to transfer globalQueue items to this context's\ndefQueue.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 560,
+            "description": "Helper function that creates a require function object to give to\nmodules that ask for it as a dependency. It needs to be specific\nper module because of the implication of path mappings that may\nneed to be relative to the module name.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 932,
+            "description": "Checks is the module is ready to define itself, and if so,\ndefine it. If the silent argument is true, then it will just\ndefine, but not notify listeners, and not ask for a context-wide\ncheck of all loaded modules. That is useful for cycle breaking.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1255,
+            "description": "Given an event from a script node, get the requirejs info from it,\nand then removes the event listeners on the node.",
+            "params": [
+                {
+                    "name": "evt",
+                    "description": "",
+                    "type": "Event"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1288,
+            "description": "Set a configuration for the context.",
+            "params": [
+                {
+                    "name": "cfg",
+                    "description": "config object to integrate.",
+                    "type": "Object"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1505,
+            "description": "Called to enable a module if it is still in the registry\nawaiting enablement. parent module is passed in for context,\nused by the optimizer.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1517,
+            "description": "Internal method used by environment adapters to complete a load event.\nA load event could be a script load or just a load pass from a synchronous\nload call.",
+            "params": [
+                {
+                    "name": "moduleName",
+                    "description": "the name of the module to potentially complete.",
+                    "type": "String"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1573,
+            "description": "Converts a module name + .extension into an URL path.\n*Requires* the use of a module name. It does not support using\nplain URLs like nameToUrl.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1591,
+            "description": "Converts a module name to a file path. Supports cases where\nmoduleName may actually be just an URL.\nNote that it **does not** call normalize on the moduleName,\nit is assumed to have already been normalized. This is an\ninternal API, not a public one. Use toUrl for the public API.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1662,
+            "description": "Executes a module callack function. Broken out as a separate function\nsolely to allow the build system to sequence the files in the built\nlayer in the right sequence.",
+            "access": "private",
+            "tagname": "",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1673,
+            "description": "callback for script loads, used to check status of loading.",
+            "params": [
+                {
+                    "name": "evt",
+                    "description": "the event from the browser for the script\nthat was loaded.",
+                    "type": "Event"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1695,
+            "description": "Callback for script errors.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1707,
+            "description": "Main entry point.\n\nIf the only argument to require is a string, then the module that\nis represented by that string is fetched for the appropriate context.\n\nIf the first argument is an array, then it will be treated as an array\nof dependency string names to fetch. An optional function callback can\nbe specified to execute when all of those dependencies are available.\n\nMake a local req variable to help Caja compliance (it assumes things\non a require that are not standardized), and to give a short\nname for minification/local scope use.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1757,
+            "description": "Support require.config() to make it easier to cooperate with other\nAMD loaders on globally agreed names.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1765,
+            "description": "Export require as a global, but only if it does not already exist.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1800,
+            "description": "Any errors that require explicitly generates will be passed to this\nfunction. Intercept/override it if you want custom error handling.",
+            "params": [
+                {
+                    "name": "err",
+                    "description": "the error object.",
+                    "type": "Error"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1809,
+            "description": "Does the request to load a module for the browser case.\nMake this a separate function to allow other environments\nto override it.",
+            "params": [
+                {
+                    "name": "context",
+                    "description": "the require context to find state.",
+                    "type": "Object"
+                },
+                {
+                    "name": "moduleName",
+                    "description": "the name of the module.",
+                    "type": "String"
+                },
+                {
+                    "name": "url",
+                    "description": "the URL to the module.",
+                    "type": "Object"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 1955,
+            "description": "The function that handles definitions of modules. Differs from\nrequire() in that a string for the module should be the first argument,\nand the function to execute after dependencies are loaded should\nreturn a value to define the module corresponding to the first argument's\nname.",
+            "class": ""
+        },
+        {
+            "file": "app\\jam\\require.js",
+            "line": 2028,
+            "description": "Executes the text. Normally just uses eval, but can be modified\nto use a better, environment-specific call. Only used for transpiling\nloader plugins, not for plain JS modules.",
+            "params": [
+                {
+                    "name": "text",
+                    "description": "the text to execute/evaluate.",
+                    "type": "String"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\vms\\vm.js",
+            "line": 1,
+            "description": "Created with JetBrains WebStorm.\nUser: 305024278\nDate: 12. 10. 19\nTime: 오후 1:20\nTo change this template use File | Settings | File Templates.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 2,
+            "license": "RequireJS 2.0.6 Copyright (c) 2010-2012, The Dojo Foundation All Rights Reserved.\nAvailable via the MIT or new BSD license.\nsee: http://github.com/jrburke/requirejs for details",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 51,
+            "description": "Helper function for iterating over an array. If the func returns\na true value, it will break out of the loop.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 66,
+            "description": "Helper function for iterating over an array backwards. If the func\nreturns a true value, it will break out of the loop.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 85,
+            "description": "Cycles over properties in an object and calls a function for each\nproperty value. If the function returns a truthy value, then the\niteration is stopped.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 101,
+            "description": "Simple function to mix in properties from source into target,\nbut only if target does not already have a property of the same name.\nThis is not robust in IE for transferring methods that match\nObject.prototype names, but the uses of mixin here seem unlikely to\ntrigger a problem related to that.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 186,
+            "description": "Constructs an error with a pointer to an URL with more information.",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "the error ID that maps to an ID on a web page.",
+                    "type": "String"
+                },
+                {
+                    "name": "message",
+                    "description": "human readable error.",
+                    "type": "String"
+                },
+                {
+                    "name": "err",
+                    "description": "the original error, if there is one.",
+                    "type": "Error",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Error"
+            },
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 249,
+            "description": "Trims the . and .. from an array of path segments.\nIt will keep a leading path segment if a .. will become\nthe first path segment, to help with module name lookups,\nwhich act like paths, but can be remapped. But the end result,\nall paths that use this function should look normalized.\nNOTE: this method MODIFIES the input array.",
+            "params": [
+                {
+                    "name": "ary",
+                    "description": "the array of path segments.",
+                    "type": "Array"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 282,
+            "description": "Given a relative module name, like ./something, normalize it to\na real name that can be mapped to a path.",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "the relative name",
+                    "type": "String"
+                },
+                {
+                    "name": "baseName",
+                    "description": "a real name that the name arg is relative\nto.",
+                    "type": "String"
+                },
+                {
+                    "name": "applyMap",
+                    "description": "apply the map config to the value. Should\nonly be done if this normalization is for a dependency ID.",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "normalized name",
+                "type": "String"
+            },
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 415,
+            "description": "Creates a module mapping that includes plugin prefix, module\nname, and path. If parentModuleMap is provided it will\nalso normalize the name via require.normalize()",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "the module name",
+                    "type": "String"
+                },
+                {
+                    "name": "parentModuleMap",
+                    "description": "parent module map\nfor the module name, used to resolve relative names.",
+                    "type": "String",
+                    "optional": true
+                },
+                {
+                    "name": "isNormalized:",
+                    "description": "is the ID already normalized.\nThis is true if this call is done for a define() module ID.",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "applyMap:",
+                    "description": "apply the map config to the ID.\nShould only be true if this map is for a dependency.",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 545,
+            "description": "Internal method to transfer globalQueue items to this context's\ndefQueue.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 561,
+            "description": "Helper function that creates a require function object to give to\nmodules that ask for it as a dependency. It needs to be specific\nper module because of the implication of path mappings that may\nneed to be relative to the module name.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 933,
+            "description": "Checks is the module is ready to define itself, and if so,\ndefine it. If the silent argument is true, then it will just\ndefine, but not notify listeners, and not ask for a context-wide\ncheck of all loaded modules. That is useful for cycle breaking.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 1256,
+            "description": "Given an event from a script node, get the requirejs info from it,\nand then removes the event listeners on the node.",
+            "params": [
+                {
+                    "name": "evt",
+                    "description": "",
+                    "type": "Event"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 1289,
+            "description": "Set a configuration for the context.",
+            "params": [
+                {
+                    "name": "cfg",
+                    "description": "config object to integrate.",
+                    "type": "Object"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 1506,
+            "description": "Called to enable a module if it is still in the registry\nawaiting enablement. parent module is passed in for context,\nused by the optimizer.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 1518,
+            "description": "Internal method used by environment adapters to complete a load event.\nA load event could be a script load or just a load pass from a synchronous\nload call.",
+            "params": [
+                {
+                    "name": "moduleName",
+                    "description": "the name of the module to potentially complete.",
+                    "type": "String"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 1574,
+            "description": "Converts a module name + .extension into an URL path.\n*Requires* the use of a module name. It does not support using\nplain URLs like nameToUrl.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 1592,
+            "description": "Converts a module name to a file path. Supports cases where\nmoduleName may actually be just an URL.\nNote that it **does not** call normalize on the moduleName,\nit is assumed to have already been normalized. This is an\ninternal API, not a public one. Use toUrl for the public API.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 1663,
+            "description": "Executes a module callack function. Broken out as a separate function\nsolely to allow the build system to sequence the files in the built\nlayer in the right sequence.",
+            "access": "private",
+            "tagname": "",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 1674,
+            "description": "callback for script loads, used to check status of loading.",
+            "params": [
+                {
+                    "name": "evt",
+                    "description": "the event from the browser for the script\nthat was loaded.",
+                    "type": "Event"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 1696,
+            "description": "Callback for script errors.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 1708,
+            "description": "Main entry point.\n\nIf the only argument to require is a string, then the module that\nis represented by that string is fetched for the appropriate context.\n\nIf the first argument is an array, then it will be treated as an array\nof dependency string names to fetch. An optional function callback can\nbe specified to execute when all of those dependencies are available.\n\nMake a local req variable to help Caja compliance (it assumes things\non a require that are not standardized), and to give a short\nname for minification/local scope use.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 1758,
+            "description": "Support require.config() to make it easier to cooperate with other\nAMD loaders on globally agreed names.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 1766,
+            "description": "Export require as a global, but only if it does not already exist.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 1801,
+            "description": "Any errors that require explicitly generates will be passed to this\nfunction. Intercept/override it if you want custom error handling.",
+            "params": [
+                {
+                    "name": "err",
+                    "description": "the error object.",
+                    "type": "Error"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 1810,
+            "description": "Does the request to load a module for the browser case.\nMake this a separate function to allow other environments\nto override it.",
+            "params": [
+                {
+                    "name": "context",
+                    "description": "the require context to find state.",
+                    "type": "Object"
+                },
+                {
+                    "name": "moduleName",
+                    "description": "the name of the module.",
+                    "type": "String"
+                },
+                {
+                    "name": "url",
+                    "description": "the URL to the module.",
+                    "type": "Object"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 1956,
+            "description": "The function that handles definitions of modules. Differs from\nrequire() in that a string for the module should be the first argument,\nand the function to execute after dependencies are loaded should\nreturn a value to define the module corresponding to the first argument's\nname.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 2029,
+            "description": "Executes the text. Normally just uses eval, but can be modified\nto use a better, environment-specific call. Only used for transpiling\nloader plugins, not for plain JS modules.",
+            "params": [
+                {
+                    "name": "text",
+                    "description": "the text to execute/evaluate.",
+                    "type": "String"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 2130,
+            "license": "RequireJS domReady 2.0.1 Copyright (c) 2010-2012, The Dojo Foundation All Rights Reserved.\nAvailable via the MIT or new BSD license.\nsee: http://github.com/requirejs/domReady for details",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 2169,
+            "description": "Sets the page as loaded.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 2226,
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 2228,
+            "description": "Registers a callback for DOM ready. If DOM is already ready, the\ncallback is called immediately.",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 2244,
+            "description": "Loader Plugin API method",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 2255,
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 6714,
+            "description": "Utility function for retrieving the text value of an array of DOM nodes",
+            "params": [
+                {
+                    "name": "elem",
+                    "description": "",
+                    "type": "Array|Element"
+                }
+            ],
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 17895,
+            "description": "Plugin that renders a customisable activity indicator (spinner) using SVG or VML.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 17952,
+            "description": "Default rendering strategy. If neither SVG nor VML is available, a div with class-name 'busy' \nis inserted, that can be styled with CSS to display an animated gif as fallback.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 17960,
+            "description": "The default animation strategy does nothing as we expect an animated gif as fallback.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 17966,
+            "description": "Utility function to create elements in the SVG namespace.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 17985,
+            "description": "Rendering strategy that creates a SVG tree.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 18020,
+            "description": "Animation strategy that uses dynamically created CSS animation rules.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 18042,
+            "description": "Animation strategy that transforms a SVG element using setInterval().",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 18073,
+            "description": "Rendering strategy that creates a VML tree.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 18094,
+            "description": "Animation strategy that modifies the VML rotation property using setInterval().",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 20044,
+            "description": "Created with JetBrains WebStorm.\nUser: 305024278\nDate: 12. 10. 16\nTime: 오후 7:32\nTo change this template use File | Settings | File Templates.",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 20188,
+            "license": "RequireJS text 2.0.2+ Copyright (c) 2010-2012, The Dojo Foundation All Rights Reserved.\nAvailable via the MIT or new BSD license.\nsee: http://github.com/requirejs/text for details",
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 20264,
+            "description": "Parses a resource name into its component parts. Resource names\nlook like: module/name.ext!strip, where the !strip part is\noptional.",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "the resource name",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "with properties \"moduleName\", \"ext\" and \"strip\"\nwhere strip is a boolean.",
+                "type": "Object"
+            },
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 20294,
+            "description": "Is an URL on another domain. Only works for browser use, returns\nfalse in non-browser environments. Only used to know if an\noptimized .js version of a text resource should be loaded\ninstead.",
+            "params": [
+                {
+                    "name": "url",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Boolean"
+            },
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 24545,
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 24546,
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 24547,
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 24673,
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 24674,
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 24675,
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 24834,
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 24835,
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 24836,
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 25092,
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 25093,
+            "class": ""
+        },
+        {
+            "file": "app\\app.min.js",
+            "line": 25094,
+            "class": ""
+        }
+    ]
+}

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>app\jam\koActivity\knockout.activity.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.7.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.7.0&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/data.html">data</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: app\jam\koActivity\knockout.activity.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;*!
+ * NETEYE Activity Indicator jQuery Plugin
+ *
+ * Copyright (c) 2010 NETEYE GmbH
+ * Licensed under the MIT license
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the &quot;Software&quot;), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and&#x2F;or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+ *
+ * Author: Felix Gnass [fgnass at neteye dot de]
+ * Version: @{VERSION}
+ *&#x2F;
+
+&#x2F;**
+ * Plugin that renders a customisable activity indicator (spinner) using SVG or VML.
+ *&#x2F;
+(function ($) {
+
+    $.fn.activity = function (opts) {
+        this.each(function () {
+            var $this = $(this);
+            var el = $this.data(&#x27;activity&#x27;);
+            if (el) {
+                clearInterval(el.data(&#x27;interval&#x27;));
+                el.remove();
+                $this.removeData(&#x27;activity&#x27;);
+            }
+            if (opts !== false) {
+                opts = $.extend({ color: $this.css(&#x27;color&#x27;) }, $.fn.activity.defaults, opts);
+
+                el = render($this, opts).css(&#x27;position&#x27;, &#x27;absolute&#x27;).prependTo(opts.outside ? &#x27;body&#x27; : $this);
+                var h = $this.outerHeight() - el.height();
+                var w = $this.outerWidth() - el.width();
+                var margin = {
+                    top: opts.valign == &#x27;top&#x27; ? opts.padding : opts.valign == &#x27;bottom&#x27; ? h - opts.padding : Math.floor(h &#x2F; 2),
+                    left: opts.align == &#x27;left&#x27; ? opts.padding : opts.align == &#x27;right&#x27; ? w - opts.padding : Math.floor(w &#x2F; 2)
+                };
+                var offset = $this.offset();
+                if (opts.outside) {
+                    el.css({ top: offset.top + &#x27;px&#x27;, left: offset.left + &#x27;px&#x27; });
+                }
+                else {
+                    margin.top -= el.offset().top - offset.top;
+                    margin.left -= el.offset().left - offset.left;
+                }
+                el.css({ marginTop: margin.top + &#x27;px&#x27;, marginLeft: margin.left + &#x27;px&#x27; });
+                animate(el, opts.segments, Math.round(10 &#x2F; opts.speed) &#x2F; 10);
+                $this.data(&#x27;activity&#x27;, el);
+            }
+        });
+        return this;
+    };
+
+    $.fn.activity.defaults = {
+        segments: 12,
+        space: 3,
+        length: 7,
+        width: 4,
+        speed: 1.2,
+        align: &#x27;center&#x27;,
+        valign: &#x27;center&#x27;,
+        padding: 4
+    };
+
+    $.fn.activity.getOpacity = function (opts, i) {
+        var steps = opts.steps || opts.segments - 1;
+        var end = opts.opacity !== undefined ? opts.opacity : 1 &#x2F; steps;
+        return 1 - Math.min(i, steps) * (1 - end) &#x2F; steps;
+    };
+
+    &#x2F;**
+	 * Default rendering strategy. If neither SVG nor VML is available, a div with class-name &#x27;busy&#x27; 
+	 * is inserted, that can be styled with CSS to display an animated gif as fallback.
+	 *&#x2F;
+    var render = function () {
+        return $(&#x27;&lt;div&gt;&#x27;).addClass(&#x27;busy&#x27;);
+    };
+
+    &#x2F;**
+	 * The default animation strategy does nothing as we expect an animated gif as fallback.
+	 *&#x2F;
+    var animate = function () {
+    };
+
+    &#x2F;**
+	 * Utility function to create elements in the SVG namespace.
+	 *&#x2F;
+    function svg(tag, attr) {
+        var el = document.createElementNS(&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;, tag || &#x27;svg&#x27;);
+        if (attr) {
+            $.each(attr, function (k, v) {
+                el.setAttributeNS(null, k, v);
+            });
+        }
+        return $(el);
+    }
+
+    if (document.createElementNS &amp;&amp; document.createElementNS(&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;, &quot;svg&quot;).createSVGRect) {
+
+        &#x2F;&#x2F; =======================================================================================
+        &#x2F;&#x2F; SVG Rendering
+        &#x2F;&#x2F; =======================================================================================
+
+        &#x2F;**
+		 * Rendering strategy that creates a SVG tree.
+		 *&#x2F;
+        render = function (target, d) {
+            var innerRadius = d.width * 2 + d.space;
+            var r = (innerRadius + d.length + Math.ceil(d.width &#x2F; 2) + 1);
+
+            var el = svg().width(r * 2).height(r * 2);
+
+            var g = svg(&#x27;g&#x27;, {
+                &#x27;stroke-width&#x27;: d.width,
+                &#x27;stroke-linecap&#x27;: &#x27;round&#x27;,
+                stroke: d.color
+            }).appendTo(svg(&#x27;g&#x27;, { transform: &#x27;translate(&#x27; + r + &#x27;,&#x27; + r + &#x27;)&#x27; }).appendTo(el));
+
+            for (var i = 0; i &lt; d.segments; i++) {
+                g.append(svg(&#x27;line&#x27;, {
+                    x1: 0,
+                    y1: innerRadius,
+                    x2: 0,
+                    y2: innerRadius + d.length,
+                    transform: &#x27;rotate(&#x27; + (360 &#x2F; d.segments * i) + &#x27;, 0, 0)&#x27;,
+                    opacity: $.fn.activity.getOpacity(d, i)
+                }));
+            }
+            return $(&#x27;&lt;div&gt;&#x27;).append(el).width(2 * r).height(2 * r);
+        };
+
+        &#x2F;&#x2F; Check if Webkit CSS animations are available, as they work much better on the iPad
+        &#x2F;&#x2F; than setTimeout() based animations.
+
+        if (document.createElement(&#x27;div&#x27;).style.WebkitAnimationName !== undefined) {
+
+            var animations = {};
+
+            &#x2F;**
+			 * Animation strategy that uses dynamically created CSS animation rules.
+			 *&#x2F;
+            animate = function (el, steps, duration) {
+                if (!animations[steps]) {
+                    var name = &#x27;spin&#x27; + steps;
+                    var rule = &#x27;@-webkit-keyframes &#x27; + name + &#x27; {&#x27;;
+                    for (var i = 0; i &lt; steps; i++) {
+                        var p1 = Math.round(100000 &#x2F; steps * i) &#x2F; 1000;
+                        var p2 = Math.round(100000 &#x2F; steps * (i + 1) - 1) &#x2F; 1000;
+                        var value = &#x27;% { -webkit-transform:rotate(&#x27; + Math.round(360 &#x2F; steps * i) + &#x27;deg); }\n&#x27;;
+                        rule += p1 + value + p2 + value;
+                    }
+                    rule += &#x27;100% { -webkit-transform:rotate(100deg); }\n}&#x27;;
+                    document.styleSheets[0].insertRule(rule);
+                    animations[steps] = name;
+                }
+                el.css(&#x27;-webkit-animation&#x27;, animations[steps] + &#x27; &#x27; + duration + &#x27;s linear infinite&#x27;);
+            };
+        }
+        else {
+
+            &#x2F;**
+			 * Animation strategy that transforms a SVG element using setInterval().
+			 *&#x2F;
+            animate = function (el, steps, duration) {
+                var rotation = 0;
+                var g = el.find(&#x27;g g&#x27;).get(0);
+                el.data(&#x27;interval&#x27;, setInterval(function () {
+                    g.setAttributeNS(null, &#x27;transform&#x27;, &#x27;rotate(&#x27; + (++rotation % steps * (360 &#x2F; steps)) + &#x27;)&#x27;);
+                }, duration * 1000 &#x2F; steps));
+            };
+        }
+
+    }
+    else {
+
+        &#x2F;&#x2F; =======================================================================================
+        &#x2F;&#x2F; VML Rendering
+        &#x2F;&#x2F; =======================================================================================
+
+        var s = $(&#x27;&lt;shape&gt;&#x27;).css(&#x27;behavior&#x27;, &#x27;url(#default#VML)&#x27;);
+
+        $(&#x27;body&#x27;).append(s);
+
+        if (s.get(0).adj) {
+
+            &#x2F;&#x2F; VML support detected. Insert CSS rules for group, shape and stroke.
+            var sheet = document.createStyleSheet();
+            $.each([&#x27;group&#x27;, &#x27;shape&#x27;, &#x27;stroke&#x27;], function () {
+                sheet.addRule(this, &quot;behavior:url(#default#VML);&quot;);
+            });
+
+            &#x2F;**
+			 * Rendering strategy that creates a VML tree. 
+			 *&#x2F;
+            render = function (target, d) {
+
+                var innerRadius = d.width * 2 + d.space;
+                var r = (innerRadius + d.length + Math.ceil(d.width &#x2F; 2) + 1);
+                var s = r * 2;
+                var o = -Math.ceil(s &#x2F; 2);
+
+                var el = $(&#x27;&lt;group&gt;&#x27;, { coordsize: s + &#x27; &#x27; + s, coordorigin: o + &#x27; &#x27; + o }).css({ top: o, left: o, width: s, height: s });
+                for (var i = 0; i &lt; d.segments; i++) {
+                    el.append($(&#x27;&lt;shape&gt;&#x27;, { path: &#x27;m &#x27; + innerRadius + &#x27;,0  l &#x27; + (innerRadius + d.length) + &#x27;,0&#x27; }).css({
+                        width: s,
+                        height: s,
+                        rotation: (360 &#x2F; d.segments * i) + &#x27;deg&#x27;
+                    }).append($(&#x27;&lt;stroke&gt;&#x27;, { color: d.color, weight: d.width + &#x27;px&#x27;, endcap: &#x27;round&#x27;, opacity: $.fn.activity.getOpacity(d, i) })));
+                }
+                return $(&#x27;&lt;group&gt;&#x27;, { coordsize: s + &#x27; &#x27; + s }).css({ width: s, height: s, overflow: &#x27;hidden&#x27; }).append(el);
+            };
+
+            &#x2F;**
+		     * Animation strategy that modifies the VML rotation property using setInterval().
+		     *&#x2F;
+            animate = function (el, steps, duration) {
+                var rotation = 0;
+                var g = el.get(0);
+                el.data(&#x27;interval&#x27;, setInterval(function () {
+                    g.style.rotation = ++rotation % steps * (360 &#x2F; steps);
+                }, duration * 1000 &#x2F; steps));
+            };
+        }
+        $(s).remove();
+    }
+
+})(jQuery);
+
+
+&#x2F;&#x2F; By: Hans Fj?lemark and John Papa
+&#x2F;&#x2F; https:&#x2F;&#x2F;github.com&#x2F;CodeSeven&#x2F;KoLite
+
+; (function ($) {
+    &quot;use strict&quot;;
+
+    &#x2F;* ACTIVITY INDICATOR EXTENDED CLASS DEFINITION
+    * ========================= *&#x2F;
+    var Indicator = function ($element) {
+        this.$element = $element;
+        this.onlyIcon = this.$element.contents().length === 1 &amp;&amp; this.$element.children(&#x27;i&#x27;).length === 1;
+        this.activityText = this.$element.data(&#x27;activity-text&#x27;);
+        this.isIndicatorOnly = this.$element.is(&#x27;i&#x27;);
+        this.icons = this.$element.children(&#x27;i&#x27;);
+    };
+
+    Indicator.prototype = {
+        createTemporaryIcon: function () {
+            if (this.onlyIcon)
+                return;
+            &#x2F;&#x2F;this.temporaryIcon = $(&#x27;&lt;i class=&quot;icon-&quot; style=&quot;padding-left: 5px&quot;&gt;&lt;&#x2F;i&gt;&#x27;);
+            this.temporaryIcon = $(&#x27;&lt;i style=&quot;display: inline-block; padding-left: 5px; width: 14px;&quot;&gt;&lt;&#x2F;i&gt;&#x27;);
+            this.$element.append(this.temporaryIcon);
+        },
+
+        hideExistingIcons: function () {
+            if (this.onlyIcon)
+                this.icons.css(&#x27;visibility&#x27;, &#x27;hidden&#x27;);
+        },
+
+        moveSpinnerToFront: function () {
+            $(&#x27;body &gt; div, body &gt; group&#x27;).first().css(&#x27;z-index&#x27;, 9999);
+        },
+
+        removeTemporaryIcon: function () {
+            if (!this.temporaryIcon)
+                return;
+
+            this.temporaryIcon.remove();
+            this.temporaryIcon = null;
+        },
+
+        setText: function (state) {
+            if (!this.activityText)
+                return;
+            var data = this.$element.data(),
+                val = this.$element.is(&#x27;input&#x27;) ? &#x27;val&#x27; : &#x27;html&#x27;;
+            if (state === &#x27;activity&#x27;)
+                this.$element.data(&#x27;resetText&#x27;, this.$element[val]());
+            this.$element[val](data[state + &#x27;Text&#x27;]);
+        },
+
+        showExistingIcons: function () {
+            this.icons.css(&#x27;visibility&#x27;, &#x27;visible&#x27;);
+        },
+
+        start: function () {
+            this.isBusy = true;
+            this.setText(&#x27;activity&#x27;);
+            this.createTemporaryIcon();
+            this.hideExistingIcons();
+            if (this.$element.is(&#x27;button&#x27;))
+                this.$element.addClass(&#x27;disabled&#x27;).attr(&#x27;disabled&#x27;, &#x27;disabled&#x27;);
+            this.$element.activity({
+                align: this.onlyIcon || this.isIndicatorOnly ? &#x27;center&#x27; : &#x27;right&#x27;,
+                length: this.isIndicatorOnly ? 5 : 2,
+                padding: 12,
+                outside: true,
+                segments: this.isIndicatorOnly ? 12 : 10,
+                space: this.isIndicatorOnly ? 2 : 1,
+                width: 1.5
+            });
+            this.moveSpinnerToFront();
+        },
+
+        stop: function () {
+            this.removeTemporaryIcon();
+            this.showExistingIcons();
+            this.isBusy = false;
+            this.setText(&#x27;reset&#x27;);
+            this.$element.activity(false);
+            this.$element.removeClass(&#x27;disabled&#x27;).removeAttr(&#x27;disabled&#x27;);
+        },
+
+        update: function (isLoading) {
+            if (isLoading &amp;&amp; !this.isBusy) {
+                this.start();
+            }
+
+            if (!isLoading &amp;&amp; this.isBusy) {
+                this.stop();
+            }
+        }
+    };
+
+    &#x2F;* ACTIVITY INDICATOR EXTENDED PLUGIN DEFINITION
+    * ========================== *&#x2F;
+
+    $.fn.activityEx = function (isLoading) {
+        var activity = function ($element) {
+            if (!isLoading) {
+                $element.activity(false);
+                return;
+            }
+
+            var length = Math.round($element.height() &#x2F; 4);
+            var isInput = $element.is(&#x27;input&#x27;);
+
+            $element.activity({
+                align: $element.is(&#x27;input&#x27;) ? &#x27;right&#x27; : &#x27;center&#x27;,
+                length: length,
+                padding: isInput ? length : 0,
+                outside: true,
+                segments: Math.max(10, 10 + (length - 5)),
+                space: 1,
+                width: 1.5
+            });
+            $(&#x27;body &gt; div&#x27;).first().css(&#x27;z-index&#x27;, 9999);
+        },
+            buttonActivity = function ($element) {
+                var data = $element.data(&#x27;activityEx&#x27;);
+                if (!data)
+                    $element.data(&#x27;activityEx&#x27;, (data = new Indicator($element)));
+                data.update(isLoading);
+            };
+        return this.each(function () {
+            $(this).is(&#x27;button, input, a&#x27;) ? buttonActivity($(this)) : activity($(this));
+        });
+    };
+})(jQuery);
+
+
+&#x2F;&#x2F; #original source code
+&#x2F;&#x2F;;(function ($, ko) {
+&#x2F;&#x2F;    ko.bindingHandlers.activity = {
+&#x2F;&#x2F;        init: function (element) {
+&#x2F;&#x2F;            ko.utils.domNodeDisposal.addDisposeCallback(element, function () {
+&#x2F;&#x2F;                $(element).activityEx(false);
+&#x2F;&#x2F;            });
+&#x2F;&#x2F;        },
+
+&#x2F;&#x2F;        update: function (element, valueAccessor) {
+&#x2F;&#x2F;            var activity = valueAccessor()();
+&#x2F;&#x2F;            typeof activity !== &#x27;boolean&#x27; || $(element).activityEx(activity);
+&#x2F;&#x2F;        }
+&#x2F;&#x2F;    };
+&#x2F;&#x2F;})(jQuery, ko);
+
+&#x2F;&#x2F; newly added source code for AMD (kwon hyojung)
+define([&#x27;jquery&#x27;, &#x27;knockout&#x27;],
+    function ($, ko) {
+        ko.bindingHandlers.activity = {
+            init: function (element) {
+                ko.utils.domNodeDisposal.addDisposeCallback(element, function () {
+                    $(element).activityEx(false);
+                });
+            },
+
+            update: function (element, valueAccessor) {
+                var activity = valueAccessor()();
+                typeof activity !== &#x27;boolean&#x27; || $(element).activityEx(activity);
+            }
+        };
+    }
+    );
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>
