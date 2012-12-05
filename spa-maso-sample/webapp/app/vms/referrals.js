@@ -52,8 +52,7 @@
             onFileNameClick = function(referral){
                 alert(referral.fileName());
             };
-
-
+            
         isBusy.subscribe(function (newValue) {
             util.toggleActivity(newValue);
         });
@@ -61,6 +60,7 @@
         searchText.subscribe(function (newValue) {
             loadReferrals();
         });
+
 
 
         return {

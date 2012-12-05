@@ -4,6 +4,14 @@
             i18n: {
                 locale: 'en'    // note that this locale config does not affect on default locale, this is just for clearing i18N plugin bug, default locale configuration is available in infra/config.js
             }
+        },
+
+        paths: {
+            bootstrap: './jam/bootstrap/docs/assets/js/bootstrap'
+        },
+
+        shim: {
+            'bootstrap': ['jquery']
         }
     });
 

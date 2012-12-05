@@ -2053,6 +2053,10 @@ var jam = {
             "main": "amplify.js"
         },
         {
+            "name": "bootstrap",
+            "location": "jam/bootstrap"
+        },
+        {
             "name": "domReady",
             "location": "jam/domReady",
             "main": "domReady.js"
@@ -2066,11 +2070,6 @@ var jam = {
             "name": "jquery",
             "location": "jam/jquery",
             "main": "jquery.js"
-        },
-        {
-            "name": "jquery-ui",
-            "location": "jam/jquery-ui",
-            "main": "dist/jquery-ui.min.js"
         },
         {
             "name": "jquery-validation",
