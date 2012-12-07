@@ -194,6 +194,7 @@
     <Content Include="webapp\app\app.min.js" />
     <Content Include="webapp\app\bindings\bindings.js" />
     <Content Include="webapp\app\bindings\button.js" />
+    <Content Include="webapp\app\bindings\resizeLeftMain.js" />
     <Content Include="webapp\app\bindings\slider.js" />
     <Content Include="webapp\app\bindings\validate.patient.js" />
     <Content Include="webapp\app\data\data.js" />
@@ -531,7 +532,6 @@
     <Content Include="webapp\app\views\left.html" />
     <Content Include="webapp\app\views\patients.html" />
     <Content Include="webapp\app\views\referrals.html" />
-    <Content Include="webapp\app\views\titles.html" />
     <Content Include="webapp\app\views\top.html" />
     <Content Include="webapp\app\views\views.js" />
     <Content Include="webapp\app\vms\documents.js" />
@@ -704,7 +704,6 @@
     <Content Include="webapp\app\styles\patients.less" />
     <Content Include="webapp\app\styles\referrals.less" />
     <Content Include="webapp\app\styles\style.less" />
-    <Content Include="webapp\app\styles\titles.less" />
     <Content Include="webapp\app\styles\top.less" />
     <Content Include="webapp\app\styles\variables.less" />
     <Content Include="webapp\package.json" />
