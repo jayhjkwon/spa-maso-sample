@@ -1,9 +1,10 @@
 ﻿define(
-    ['./validate.patient', './loadingButton'],
-    function (validatePatient, loadingButton) {
+    ['./validate.patient', './loadingButton', './resizeLeftMain'],
+    function (validatePatient, loadingButton, resizeLeftMain) {
         return {
             validatePatient: validatePatient,
-            loadingButton: loadingButton
+            loadingButton: loadingButton,
+            resizeLeftMain: resizeLeftMain
         };
     }
 );

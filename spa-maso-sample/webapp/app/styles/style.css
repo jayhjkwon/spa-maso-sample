@@ -9,12 +9,6 @@
 }
 /* Common styles
 -----------------------------------------------------------*/
-body {
-  font-family: Arial, "Segoe UI", Verdana, Helvetica, Sans-Serif;
-  font-size: 14px;
-  color: #232323;
-  overflow: hidden;
-}
 .view {
   /*position: relative;*/
 
@@ -103,35 +97,6 @@ div#top ul li a {
 }
 div#top ul label {
   color: #000;
-}
-#titles-div ul,
-#titles-div li {
-  margin: 0;
-  padding: 0;
-}
-#titles-div ul {
-  list-style: none;
-}
-#titles-div li {
-  height: 100px;
-  border: 0px solid;
-  margin: 10px;
-  background: #ffffff;
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -webkit-box-shadow: inset 0 0 5px #888888;
-  -moz-box-shadow: inset 0 0 5px #888888;
-  box-shadow: inset 0 0 5px #888888;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-#titles-div li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: #999;
 }
 h2 {
   font-size: 40px;

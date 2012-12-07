@@ -453,6 +453,12 @@
     <Content Include="webapp\app\styles\common.min.css">
       <DependentUpon>common.less</DependentUpon>
     </Content>
+    <Content Include="webapp\app\styles\left.css">
+      <DependentUpon>left.less</DependentUpon>
+    </Content>
+    <Content Include="webapp\app\styles\left.min.css">
+      <DependentUpon>left.less</DependentUpon>
+    </Content>
     <Content Include="webapp\app\styles\style.css" />
     <Content Include="webapp\app\styles\style.min.css" />
     <Content Include="webapp\app\styles\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -509,6 +515,18 @@
     <Content Include="webapp\app\styles\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="webapp\app\styles\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="webapp\app\styles\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="webapp\app\styles\top.css">
+      <DependentUpon>top.less</DependentUpon>
+    </Content>
+    <Content Include="webapp\app\styles\top.min.css">
+      <DependentUpon>top.less</DependentUpon>
+    </Content>
+    <Content Include="webapp\app\styles\variables.css">
+      <DependentUpon>variables.less</DependentUpon>
+    </Content>
+    <Content Include="webapp\app\styles\variables.min.css">
+      <DependentUpon>variables.less</DependentUpon>
+    </Content>
     <Content Include="webapp\app\views\documents.html" />
     <Content Include="webapp\app\views\left.html" />
     <Content Include="webapp\app\views\patients.html" />

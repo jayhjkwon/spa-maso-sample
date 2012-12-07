@@ -7,15 +7,12 @@
             viewPanels = {
                 TOP: 'TOP',
                 LEFT: 'LEFT',
-                TITLES: 'TITLES',
-                MAIN: 'MAIN',
-                FOOTER: 'FOOTER'
+                MAIN: 'MAIN'
             },
 
             viewIds = {
                 top: '#top-div',
                 left: '#left-div',
-                titles: '#titles-div',
                 referral: '#referral-div',
                 patient: '#patient-div',
                 document: '#document-div'

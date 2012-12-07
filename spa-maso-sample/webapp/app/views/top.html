@@ -1,9 +1,24 @@
-<div id="nav-div">
-    <ul>
-        <li><a href="#/referrals" data-bind="text: referralLabel"></a></li>
-        <li><a href="#/patients" data-bind="text: patientLabel"></a></li>
-        <li><a href="#/documents"  data-bind="text: documentLabel"></a></li>
-    </ul>
-    <button data-bind="click: useEnglish">English</button>
-    <button data-bind="click: useKorean">Korean</button>
+<div id="nav-div" class="navbar-inner">
+    <div class="container-fluid">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+        <a class="brand" style="margin: 0 20px;" href="#">Ray's Blog</a>
+        <div class="nav-collapse collapse in">
+            <ul class="nav">
+                <li class="active">
+                    <a href="#"><i class="icon-home"></i>&nbsp;&nbsp;Home</a>
+                </li>
+                <li><a href="#/post/new"><i class="icon-pencil"></i>&nbsp;&nbsp;New Post</a></li>
+                <li><a href="#/chat"><i class="icon-comment"></i>&nbsp;&nbsp;Chat</a></li>
+                <li>
+                    <div class="navbar-search">
+                        <input type="text" class="search-query" placeholder="Search">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>

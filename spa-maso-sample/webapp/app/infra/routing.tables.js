@@ -18,14 +18,7 @@
                 viewModel: vms.left,
             },
 
-            // titles
-            {
-                viewId: config.viewIds.titles,
-                view: views.titles,
-                viewPanel: config.viewPanels.TITLES,
-                viewModel: vms.titles,
-            },
-
+            
 			// referral
 			{
                 viewId: config.viewIds.referral,
