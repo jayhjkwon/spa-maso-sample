@@ -1,39 +1,11 @@
 <div id="left-div">
-    <ul class="nav nav-list">
-        <li class="active">
-            <a href="#/post/detail/1">
-                <label>How to change background color?</label>
-                <label class="date-created"><i class="icon-time"></i>&nbsp;2012-12-05</label>
-            </a>
-        </li>
-        <li data-bind="click: onItemClick">
-            <a href="#/post/detail/2">
-                <label>This is awsome (8)</label>
-                <label class="date-created"><i class="icon-time"></i>&nbsp;2012-12-05</label>
-            </a>
-        </li>
-        <li data-bind="click: onItemClick">
-            <a href="#/post/detail/3">
-                <label>Let't me introduce myself</label>
-                <label class="date-created"><i class="icon-time"></i>&nbsp;2012-10-11</label>
-            </a>
-        </li>
-        <li data-bind="click: onItemClick">
-            <a href="#/post/detail/4">
-                <label>What is the best language in web programming (4)</label>
-                <label class="date-created"><i class="icon-time"></i>&nbsp;2012-10-05</label>
-            </a>
-        </li>
-        <li data-bind="click: onItemClick">
-            <a href="#/post/detail/5">
-                <label>Great!!</label>
-                <label class="date-created"><i class="icon-time"></i>&nbsp;2011-12-11</label>
-            </a>
-        </li>
-        <li data-bind="click: onItemClick">
-            <a href="#/post/detail/6">
-                <label>See you next year</label>
-                <label class="date-created"><i class="icon-time"></i>&nbsp;2011-06-23</label>
+    <ul class="nav nav-list" data-bind="foreach: posts">
+        <li data-bind="setActive:{}">
+            <a data-bind="attr: {href: url}">
+                <label data-bind="text: shortTitle"></label>
+                <div class="date-created" >
+                    <i class="icon-time"></i><label data-bind="text: timeCreated"></label>
+                </div>
             </a>
         </li>
     </ul>

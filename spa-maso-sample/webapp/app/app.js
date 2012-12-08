@@ -30,7 +30,6 @@
 
                     if (config.useMock) {
                         mocks.init();
-                        
                     }
                 };
 

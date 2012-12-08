@@ -1,6 +1,6 @@
 ﻿define(
-    ['jquery', 'amplify', 'infra/store', 'sammy'],
-    function ($, amplify, store, sammy) {
+    ['jquery', 'amplify', 'infra/store'],
+    function ($, amplify, store) {
         var
             init = function () {
                 amplify.request.define('referrals', 'ajax', {

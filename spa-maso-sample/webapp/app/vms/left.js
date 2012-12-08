@@ -1,20 +1,34 @@
 define(
-    ['jquery', 'knockout'],
-    function ($, ko) {
+    ['jquery', 'knockout', 'knockout.mapping', 'data/data', 'infra/store', 'infra/util', 'nls/nls', 'models/models'],
+    function ($, ko, mapping, data, store, util, resources, models) {
         var
-            posts = ko.observableArray([]),
-            
-            getPosts = function () {
+            posts      = ko.observableArray([]),
+            searchText = ko.observable(''),
 
+            getPosts = function (param) {
+                $.when(data.deferredRequest('postList', searchText()))
+                 .done(function (postList) {
+                     mapping.fromJS(postList, postMappingOption, posts);
+
+                     if ($.isFunction(param)) {
+                         param(posts());
+                     }
+                 })
+                 .fail(function (data, status) {
+                     console.log('error: ' + status);
+                 });
             },
 
-            onItemClick = function (item) {
+            postMappingOption = {
+                create: function (options) {
+                    return new models.Post(options.data);
+                }
+            }
+        ;
 
-            };
-
+        
         return {
-            posts : posts,
-            getPosts: getPosts,
-            onItemClick: onItemClick
+            posts: posts,
+            getPosts: getPosts
         };
     });

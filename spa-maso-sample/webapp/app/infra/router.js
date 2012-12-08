@@ -33,6 +33,9 @@
                                 }
                             });
                         });
+                    }else {
+                        if (table.callback)
+                            table.callback();
                     }
 
                     // apply viewModel binding

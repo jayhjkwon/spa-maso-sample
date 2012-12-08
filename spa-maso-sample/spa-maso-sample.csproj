@@ -195,13 +195,15 @@
     <Content Include="webapp\app\bindings\bindings.js" />
     <Content Include="webapp\app\bindings\button.js" />
     <Content Include="webapp\app\bindings\resizeLeftMain.js" />
+    <Content Include="webapp\app\bindings\setSelectedItem.js" />
     <Content Include="webapp\app\bindings\slider.js" />
     <Content Include="webapp\app\bindings\typeahead.js" />
     <Content Include="webapp\app\bindings\validate.patient.js" />
     <Content Include="webapp\app\data\data.js" />
+    <Content Include="webapp\app\data\mock\mock.post.js" />
     <Content Include="webapp\app\data\mock\mock.referral.js" />
     <Content Include="webapp\app\data\mock\mocks.js" />
-    <Content Include="webapp\app\data\patient.js" />
+    <Content Include="webapp\app\data\post.js" />
     <Content Include="webapp\app\data\referral.js" />
     <Content Include="webapp\app\images\ajax-loader-1.gif" />
     <Content Include="webapp\app\images\ajax-loader-2.gif" />
@@ -445,6 +447,7 @@
     <Content Include="webapp\app\jam\underscore\underscore.js" />
     <Content Include="webapp\app\models\document.js" />
     <Content Include="webapp\app\models\models.js" />
+    <Content Include="webapp\app\models\post.js" />
     <Content Include="webapp\app\models\referral.js" />
     <Content Include="webapp\app\nls\ko-kr\resources.js" />
     <Content Include="webapp\app\nls\nls.js" />
@@ -773,6 +776,9 @@
     <Content Include="webapp\app\styles\post.detail.less" />
     <Content Include="webapp\app\styles\post.write.less" />
     <Content Include="webapp\app\styles\post.edit.less" />
+    <Content Include="webapp\app\app.min.js.map">
+      <DependentUpon>app.js</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
