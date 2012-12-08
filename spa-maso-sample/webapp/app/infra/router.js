@@ -2,22 +2,14 @@
     ['jquery', 'underscore', 'knockout', 'sammy', './config', './presenter'],
     function ($, _, ko, sammy, config, presenter) {
         var
-            app = Sammy(function () {
-            }),
+            app = Sammy(function () {}),
 
             navigateTo = function (url) {
                 app.setLocation(url);
             },
 
             registerTables = function (tables) {
-
-                // default route
-                app.get('', function () {
-                    navigateTo(config.hashes.referral);
-                });
-
                 _.each(tables, function (table) {
-
                     // attach the view to the panels
                     switch (table.viewPanel) {
                         case config.viewPanels.TOP:
@@ -26,21 +18,20 @@
                         case config.viewPanels.LEFT:
                             $('#left').append(table.view);
                             break;
-                        case config.viewPanels.TITLES:
-                            $('#titles').append(table.view);
-                            break;
                         case config.viewPanels.MAIN:
                             $('#main').append(table.view);
                             break;
                     }
 
                     // register route
-                    if (table.route) {
-                        app.get(table.route, function (context) {
-                            presenter.showView(table.viewId);
-                            if (table.callback) {
-                                table.callback(context.params);
-                            }
+                    if (table.routes) {
+                        _.each(table.routes, function(route) {
+                            app.get(route, function(context) {
+                                presenter.showView(table.viewId);
+                                if (table.callback) {
+                                    table.callback(context.params);
+                                }
+                            });
                         });
                     }
 
@@ -51,7 +42,7 @@
 
             run = function (routingTables) {
                 registerTables(routingTables);
-                app.run();
+                app.run(config.hashes.postDetail);
             };
 
 

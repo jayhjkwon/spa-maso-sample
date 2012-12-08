@@ -196,6 +196,7 @@
     <Content Include="webapp\app\bindings\button.js" />
     <Content Include="webapp\app\bindings\resizeLeftMain.js" />
     <Content Include="webapp\app\bindings\slider.js" />
+    <Content Include="webapp\app\bindings\typeahead.js" />
     <Content Include="webapp\app\bindings\validate.patient.js" />
     <Content Include="webapp\app\data\data.js" />
     <Content Include="webapp\app\data\mock\mock.referral.js" />
@@ -531,12 +532,18 @@
     <Content Include="webapp\app\views\documents.html" />
     <Content Include="webapp\app\views\left.html" />
     <Content Include="webapp\app\views\patients.html" />
+    <Content Include="webapp\app\views\post\detail.html" />
+    <Content Include="webapp\app\views\post\edit.html" />
+    <Content Include="webapp\app\views\post\write.html" />
     <Content Include="webapp\app\views\referrals.html" />
     <Content Include="webapp\app\views\top.html" />
     <Content Include="webapp\app\views\views.js" />
     <Content Include="webapp\app\vms\documents.js" />
     <Content Include="webapp\app\vms\left.js" />
     <Content Include="webapp\app\vms\patients.js" />
+    <Content Include="webapp\app\vms\post\detail.js" />
+    <Content Include="webapp\app\vms\post\edit.js" />
+    <Content Include="webapp\app\vms\post\write.js" />
     <Content Include="webapp\app\vms\referrals.js" />
     <Content Include="webapp\app\vms\titles.js" />
     <Content Include="webapp\app\vms\top.js" />
@@ -770,6 +777,8 @@
     <Content Include="webapp\app\jam\bootstrap\Makefile" />
     <Content Include="webapp\app\jam\bootstrap\package.json" />
     <Content Include="webapp\app\jam\bootstrap\README.md" />
+    <Content Include="webapp\app\styles\post.detail.less" />
+    <Content Include="webapp\app\styles\post.write.less" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

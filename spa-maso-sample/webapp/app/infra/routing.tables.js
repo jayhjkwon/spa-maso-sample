@@ -18,35 +18,61 @@
                 viewModel: vms.left,
             },
 
-            
-			// referral
+            // post-detail
 			{
-                viewId: config.viewIds.referral,
-                view: views.referral,
-                viewPanel: config.viewPanels.MAIN,
-                viewModel: vms.referrals,
-                route: config.hashes.referral,
-                //callback: vms.referrals.loadReferrals,
+			    viewId: config.viewIds.postDetail,
+			    view: views.postDetail,
+			    viewPanel: config.viewPanels.MAIN,
+			    routes: [config.hashes.home, config.hashes.postDetail],
+			    callback: vms.postDetail.getPost,
 			},
 
-			// patient
+            // post-write
 			{
-                viewId: config.viewIds.patient,
-                view: views.patient,
-                viewPanel: config.viewPanels.MAIN,
-                viewModel: vms.patients,
-                route: config.hashes.patient,
-                callback: vms.patients.loadPatients,
+			    viewId: config.viewIds.postWrite,
+			    view: views.postWrite,
+			    viewPanel: config.viewPanels.MAIN,
+			    routes: [config.hashes.postWrite]
 			},
 
-			// document
+            // post-edit
 			{
-                viewId: config.viewIds.document,
-                view: views.documents,
-                viewPanel: config.viewPanels.MAIN,
-                viewModel: vms.document,
-                route: config.hashes.document,
+			    viewId: config.viewIds.postEdit,
+			    view: views.postEdit,
+			    viewPanel: config.viewPanels.MAIN,
+			    routes: [config.hashes.postEdit]
 			}
+	    
+			//// referral
+			//{
+            //    viewId: config.viewIds.referral,
+            //    view: views.referral,
+            //    viewPanel: config.viewPanels.MAIN,
+            //    viewModel: vms.referrals,
+            //    route: config.hashes.referral,
+            //    //callback: vms.referrals.loadReferrals,
+			//},
+
+			//// patient
+			//{
+            //    viewId: config.viewIds.patient,
+            //    view: views.patient,
+            //    viewPanel: config.viewPanels.MAIN,
+            //    viewModel: vms.patients,
+            //    route: config.hashes.patient,
+            //    callback: vms.patients.loadPatients,
+			//},
+
+			//// document
+			//{
+            //    viewId: config.viewIds.document,
+            //    view: views.documents,
+            //    viewPanel: config.viewPanels.MAIN,
+            //    viewModel: vms.document,
+            //    route: config.hashes.document,
+			//},
+		    
+            
 		];
 	}
 );

@@ -1,23 +1,27 @@
 #left-div {
-    /*ul {
-		margin: 0;
-		padding: 0;
-
-        li {
-			margin: 5px;
-            width: 100%;
-			border: 1px solid;
-        }
-    }*/
-
 
     .nav a {
         color: #000;
-		font-weight: bold;
-		height: @box-height;
-		border: 1px solid darken(@left-background-color, 40%);
-		margin: 10px -3px ;
-		.border-radius(3px);
-		.box-shadow(0 0 5px darken(@left-background-color, 40%));
+        height: @box-height;
+        border: 1px solid darken(@left-background-color, 10%);
+        margin: 10px -3px;
+        .border-radius(5px);
+        .box-shadow(0 0 5px darken(@left-background-color, 40%));
+        position: relative;
+
+        label {
+            font-weight: bold;
+
+            &.date-created {
+                font-weight: normal;
+                position: absolute;
+                bottom: 5px;
+                right: 10px;
+            }
+        }
+    }
+
+    .nav-list > .active > a {
+		#gradient > .vertical (lighten(#08c, 30%), #08C); 
     }
 }
