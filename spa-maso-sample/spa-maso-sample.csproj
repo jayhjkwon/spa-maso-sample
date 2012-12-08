@@ -779,6 +779,7 @@
     <Content Include="webapp\app\jam\bootstrap\README.md" />
     <Content Include="webapp\app\styles\post.detail.less" />
     <Content Include="webapp\app\styles\post.write.less" />
+    <Content Include="webapp\app\styles\post.edit.less" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -2,9 +2,9 @@
     ['jquery', 'underscore', 'knockout', 'sammy', './config', './presenter'],
     function ($, _, ko, sammy, config, presenter) {
         var
-            app = Sammy(function () {}),
+            app            = Sammy(function () {}),
 
-            navigateTo = function (url) {
+            navigateTo     = function (url) {
                 app.setLocation(url);
             },
 
@@ -40,7 +40,7 @@
                 });
             },
 
-            run = function (routingTables) {
+            run            = function (routingTables) {
                 registerTables(routingTables);
                 app.run(config.hashes.postDetail);
             };
