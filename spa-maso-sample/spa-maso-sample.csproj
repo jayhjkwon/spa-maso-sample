@@ -529,23 +529,18 @@
     <Content Include="webapp\app\styles\variables.min.css">
       <DependentUpon>variables.less</DependentUpon>
     </Content>
-    <Content Include="webapp\app\views\documents.html" />
     <Content Include="webapp\app\views\left.html" />
-    <Content Include="webapp\app\views\patients.html" />
     <Content Include="webapp\app\views\post\detail.html" />
     <Content Include="webapp\app\views\post\edit.html" />
     <Content Include="webapp\app\views\post\write.html" />
     <Content Include="webapp\app\views\referrals.html" />
     <Content Include="webapp\app\views\top.html" />
     <Content Include="webapp\app\views\views.js" />
-    <Content Include="webapp\app\vms\documents.js" />
     <Content Include="webapp\app\vms\left.js" />
-    <Content Include="webapp\app\vms\patients.js" />
     <Content Include="webapp\app\vms\post\detail.js" />
     <Content Include="webapp\app\vms\post\edit.js" />
     <Content Include="webapp\app\vms\post\write.js" />
     <Content Include="webapp\app\vms\referrals.js" />
-    <Content Include="webapp\app\vms\titles.js" />
     <Content Include="webapp\app\vms\top.js" />
     <Content Include="webapp\app\vms\vms.js" />
     <Content Include="index.html" />
@@ -705,10 +700,8 @@
     <Content Include="webapp\app\styles\common.less" />
     <Content Include="webapp\app\styles\layout.less" />
     <Content Include="webapp\app\styles\left.less" />
-    <Content Include="webapp\app\styles\main.less" />
     <Content Include="webapp\app\styles\mixins.less" />
     <Content Include="webapp\app\styles\normalize.less" />
-    <Content Include="webapp\app\styles\patients.less" />
     <Content Include="webapp\app\styles\referrals.less" />
     <Content Include="webapp\app\styles\style.less" />
     <Content Include="webapp\app\styles\top.less" />
