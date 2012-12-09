@@ -2,9 +2,9 @@
     ['jquery', 'underscore', 'knockout', 'sammy', './config', './presenter'],
     function ($, _, ko, sammy, config, presenter) {
         var
-            app            = Sammy(function () {}),
+            app = Sammy(function () { }),
 
-            navigateTo     = function (url) {
+            navigateTo = function (url) {
                 app.setLocation(url);
             },
 
@@ -25,32 +25,33 @@
 
                     // register route
                     if (table.routes) {
-                        _.each(table.routes, function(route) {
-                            app.get(route, function(context) {
+                        _.each(table.routes, function (route) {
+                            app.get(route, function (context) {
                                 presenter.showView(table.viewId);
                                 if (table.callback) {
                                     table.callback(context.params);
                                 }
                             });
                         });
-                    }else {
+                    } else {
                         if (table.callback)
                             table.callback();
                     }
 
                     // apply viewModel binding
-                    ko.applyBindings(table.viewModel, presenter.getView(table.viewId));     // table.view is just string, not HTML element, so use presenter.getView method instead of table.view
+                    if (table.viewModel && table.viewId)
+                        ko.applyBindings(table.viewModel, presenter.getView(table.viewId));     // table.view is just string, not HTML element, so use presenter.getView method instead of table.view
                 });
             },
 
-            run            = function (routingTables) {
+            run = function (routingTables) {
                 registerTables(routingTables);
                 app.run(config.hashes.postDetail);
             };
 
 
         return {
-            run:run,
-            navigateTo:navigateTo
+            run: run,
+            navigateTo: navigateTo
         };
     });

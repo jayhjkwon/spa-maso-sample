@@ -24,6 +24,7 @@
 			    viewId      : config.viewIds.postDetail,
 			    view        : views.postDetail,
 			    viewPanel   : config.viewPanels.MAIN,
+			    viewModel   : vms.postDetail,
 			    routes      : [config.hashes.home, config.hashes.postDetail],
 			    callback    : vms.postDetail.getPost,
 			},
@@ -33,6 +34,7 @@
 			    viewId      : config.viewIds.postWrite,
 			    view        : views.postWrite,
 			    viewPanel   : config.viewPanels.MAIN,
+			    viewModel   : vms.postWrite,
 			    routes      : [config.hashes.postWrite]
 			},
 
@@ -41,6 +43,7 @@
 			    viewId      : config.viewIds.postEdit,
 			    view        : views.postEdit,
 			    viewPanel   : config.viewPanels.MAIN,
+                viewModel   : vms.postEdit,
 			    routes      : [config.hashes.postEdit]
 			}
 	    
