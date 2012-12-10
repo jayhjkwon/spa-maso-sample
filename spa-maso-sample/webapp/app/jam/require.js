@@ -2101,6 +2101,11 @@ var jam = {
             "location": "jam/modernizr"
         },
         {
+            "name": "moment",
+            "location": "jam/moment",
+            "main": "moment.js"
+        },
+        {
             "name": "sammy",
             "location": "jam/sammy",
             "main": "sammy.js"

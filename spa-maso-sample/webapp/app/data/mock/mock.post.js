@@ -1,6 +1,6 @@
 ﻿define(
-    ['jquery', 'underscore', 'amplify', 'mockJson'],
-    function ($, _, amplify, mockJson) {
+    ['jquery', 'underscore', 'amplify', 'mockJson', 'moment'],
+    function ($, _, amplify, mockJson, moment) {
         var
             init = function () {
                 var
@@ -85,6 +85,7 @@
                 amplify.request.define('savePost', function (request) {
                     var post = request.data;
                     post.id = 99999;
+                    post.timeCreated = moment().format('YYYY-MM-DD');
                     request.success(post);
                 });
 

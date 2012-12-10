@@ -15,6 +15,10 @@
     </div>
     <div class="comments">
         <i class="icon-comment"></i>&nbsp;<b>Comments</b>
+        <div data-bind="if: !$parent.isCommentsExist()" style="margin-bottom:10px;">
+            <span class="label">No Comments yet.</span>
+        </div>
+        <!-- ko if: $parent.isCommentsExist -->
         <table class="table table-hover">
             <tbody data-bind="foreach: comments">
                 <tr>
@@ -25,6 +29,7 @@
                 </tr>
             </tbody>
         </table>
+        <!-- /ko -->
     </div>
     <div class="write-comment">
         <form>

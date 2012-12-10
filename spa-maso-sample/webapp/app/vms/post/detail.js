@@ -8,7 +8,8 @@
                 }
             },
 
-            post = ko.observable();
+            post = ko.observable(),
+            isCommentsExist = ko.observable(true);
 
             getPost = function (param) {
                 if (!param.id)
@@ -27,12 +28,18 @@
             }
         ;
 
-           left.selectedPost.subscribe(function (newVal) {
+            left.selectedPost.subscribe(function (newVal) {
+                if (!newVal.comments)
+                    isCommentsExist(false);
+                else
+                    isCommentsExist(true);
+                console.log('test=' + isCommentsExist());
                 post(newVal);
             });
 
         return {
             post    : post,
-            getPost : getPost
+            getPost: getPost,
+            isCommentsExist : isCommentsExist
         };
     });
