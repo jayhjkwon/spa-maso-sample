@@ -1,41 +1,27 @@
 ﻿define(
     ['jquery', 'knockout', 'knockout.mapping', 'data/data', 'infra/store', 'infra/util', 'nls/nls', 'models/models'],
     function ($, ko, mapping, data, store, util, resources, models) {
-        var post = {},//ko.observable(),//mapping.fromJS({}), //ko.observable({}),
-            title = ko.observable('title'),
+        var
             mappingOption = {
-                create: function(options) {
+                create: function (options) {
                     return new models.Post(options.data);
                 }
             },
-            getPost = function(param) {
-                //console.log('post id = ' + param.id);
+
+            post = ko.observable();
+
+            getPost = function (param) {
                 if (!param.id)
                     return;
                 // TODO : raise error message using toastr when no param.id provided
 
-                //mapping.fromJS({ title: new Date() }, mappingOption, post);
-                //title(new Date());
-                //ko.applyBindings(post, document.getElementById('section-post-detail'));
-                
                 $.when(data.deferredRequest('postDetail', param.id))
-                    .done(function(result) {
-                        mapping.fromJS(result, mappingOption, post);
-                        //post = mapping.fromJS(result, mappingOption);
-                        //post = mapping.fromJS(result);
-                        //mapping.fromJS(result, { }, post);
-                        //post = result;
-                        var p = post.title();
-                        title(p);
-                        console.log(result.title === post.title());
-                        console.log(ko.isObservable(post.title));
-                        
-                        //ko.applyBindings(post, document.getElementById('section-post-detail'));
-                        var t = '';
-                        //if ($.isFunction(param)) 
-                        //    param(post());
+                    .done(function (result) {
+                        post(mapping.fromJS(result, mappingOption));
+                        if ($.isFunction(param))
+                            param(post());
                     })
-                    .fail(function(data, status) {
+                    .fail(function (data, status) {
                         console.log('error: ' + status);
                     });
             }
@@ -43,7 +29,6 @@
 
         return {
             post    : post,
-            title   : title,
             getPost : getPost
         };
     });

@@ -9,7 +9,7 @@
                             {
                                 "id|+1"       : 1,
                                 "title"       : "@TITLES",
-                                "content"     : "@LOREM_IPSUM",
+                                "content|10-30"     : "@LOREM_IPSUM",
                                 "timeCreated" : "@DATE_YYYY-@DATE_MM-@DATE_DD",
                                 "tags|1-5"    : ["@TAGS"],
                                 "comments|1-5": [
@@ -28,7 +28,7 @@
                             {
                                 "id"          : "@NUMBER",
                                 "title"       : "@TITLES",
-                                "content"     : "@LOREM_IPSUM",
+                                "content|10-30"     : "@LOREM_IPSUM",
                                 "timeCreated" : "@DATE_YYYY-@DATE_MM-@DATE_DD",
                                 "tags|1-5"    : ["@TAGS"],
                                 "comments|1-5": [

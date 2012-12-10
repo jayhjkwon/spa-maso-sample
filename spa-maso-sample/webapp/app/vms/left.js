@@ -26,7 +26,7 @@ define(
         ;
         
         return {
-            posts: posts,
+            posts   : posts,
             getPosts: getPosts
         };
     });

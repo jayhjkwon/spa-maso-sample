@@ -1,62 +1,28 @@
-﻿<section id="section-post-detail" class="view" >
-    <div class="page-header" >
-        <h3 data-bind="text: title"></h3>
-        <!--<h3 data-bind="text: post.title"></h3>
-        <h3 data-bind="text: post().title"></h3>
-        <h3 data-bind="text: post.title()"></h3>-->
-    </div>
-</section>
-
-<section id="section1" class="view">
+﻿<section id="section-post-detail" class="view" data-bind="with: post">
     <div class="page-header">
-        <h3 data-bind="text: post.title"></h3>
+        <h3 data-bind="text: title"></h3>
     </div>
-    
-    <div class="content" data-bind="text: post.content"></div>
+
+    <div class="content" data-bind="text: content"></div>
     <div class="time-created">
-        <i class="icon-time"></i>&nbsp;Posted at&nbsp;<b data-bind="text: post.timeCreated"></b>
+        <i class="icon-time"></i>&nbsp;Posted at&nbsp;<b data-bind="text: timeCreated"></b>
     </div>
     <div class="tags">
         <i class="icon-tags"></i>
-        <!-- ko foreach: post.tags -->
-            <a href="#" class="btn btn-info btn-mini" data-bind="text: $data"></a>
+        <!-- ko foreach: tags -->
+        <a href="#" class="btn btn-info btn-mini" data-bind="text: $data"></a>
         <!-- /ko -->
-        <!--<a href="#" class="btn btn-info btn-mini">asp.net</a>
-        <a href="#" class="btn btn-info btn-mini">knockoutjs</a>
-        <a href="#" class="btn btn-info btn-mini">backbonejs</a>
-        <a href="#" class="btn btn-info btn-mini">javascript</a>-->
     </div>
     <div class="comments">
         <i class="icon-comment"></i>&nbsp;<b>Comments</b>
         <table class="table table-hover">
-            <tbody data-bind="foreach: post.comments">
+            <tbody data-bind="foreach: comments">
                 <tr>
                     <td>
                         <p><b data-bind="text: commenterFirstName"></b>&nbsp;wrote at&nbsp;<em data-bind="text: commentTime"></em></p>
                         <p data-bind="text: commentText"></p>
                     </td>
                 </tr>
-                
-                <!--<tr>
-                        <td>
-                            <p>
-                                <b>Kwon</b>&nbsp;wrote at&nbsp;<em>2012-12-20 12:30</em>
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td >
-                            <p>
-                                <b>Scott</b>&nbsp;wrote at&nbsp;<em>2012-12-20 12:30</em>
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit fusce vel sapien elit in malesuada semper mi, id sollicitudin urna fermentum ut fusce varius nisl ac ipsum gravida vel pretium tellus.
-                            </p>
-                        </td>
-                    </tr>-->
             </tbody>
         </table>
     </div>
