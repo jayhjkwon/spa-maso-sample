@@ -2,8 +2,9 @@ define(
     ['jquery', 'knockout', 'knockout.mapping', 'data/data', 'infra/store', 'infra/util', 'nls/nls', 'models/models'],
     function ($, ko, mapping, data, store, util, resources, models) {
         var
-            posts      = ko.observableArray([]),
-            searchText = ko.observable(''),
+            posts        = ko.observableArray([]),
+            selectedPost = ko.observable(),
+            searchText   = ko.observable(''),
 
             postMappingOption = {
                 create: function (options) {
@@ -22,11 +23,18 @@ define(
                  .fail(function (data, status) {
                      console.log('error: ' + status);
                  });
+            },
+
+            onItemClick = function (item) {
+                selectedPost(item);
+                console.log('test' + selectedPost);
             }
         ;
         
         return {
-            posts   : posts,
-            getPosts: getPosts
+            posts        : posts,
+            getPosts     : getPosts,
+            onItemClick  : onItemClick,
+            selectedPost: selectedPost
         };
     });

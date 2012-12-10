@@ -1,6 +1,6 @@
 <div id="left-div">
     <ul class="nav nav-list" data-bind="foreach: posts">
-        <li data-bind="setActive:{}">
+        <li data-bind="setActive:{}, click: $parent.onItemClick">
             <a data-bind="attr: {href: url}">
                 <label data-bind="text: shortTitle"></label>
                 <div class="date-created" >

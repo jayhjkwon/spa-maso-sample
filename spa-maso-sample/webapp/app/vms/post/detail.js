@@ -1,6 +1,6 @@
 ﻿define(
-    ['jquery', 'knockout', 'knockout.mapping', 'data/data', 'infra/store', 'infra/util', 'nls/nls', 'models/models'],
-    function ($, ko, mapping, data, store, util, resources, models) {
+    ['jquery', 'knockout', 'knockout.mapping', 'data/data', 'infra/store', 'infra/util', 'nls/nls', 'models/models', '../left'],
+    function ($, ko, mapping, data, store, util, resources, models, left) {
         var
             mappingOption = {
                 create: function (options) {
@@ -13,7 +13,7 @@
             getPost = function (param) {
                 if (!param.id)
                     return;
-                // TODO : raise error message using toastr when no param.id provided
+                // TODO : raise an error message using toastr when no param.id provided
 
                 $.when(data.deferredRequest('postDetail', param.id))
                     .done(function (result) {
@@ -26,6 +26,10 @@
                     });
             }
         ;
+
+           left.selectedPost.subscribe(function (newVal) {
+                post(newVal);
+            });
 
         return {
             post    : post,
