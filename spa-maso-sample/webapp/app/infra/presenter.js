@@ -1,7 +1,9 @@
 ﻿define(
-    ['jquery', './util'],
-    function ($, util) {
+    ['jquery', './util', 'knockout'],
+    function ($, util, ko) {
         var
+            currentViewId = ko.observable();
+
             getView = function (viewId) {
                 return $(viewId).get(0);
             },
@@ -28,6 +30,8 @@
                     marginRight: 0,
                     opacity: 1
                 }, 500, 'swing');
+
+                currentViewId(viewId);
             },
 
 
@@ -38,8 +42,9 @@
         init();
 
         return {
-            showView:showView,
-            getView:getView
+            showView     :showView,
+            getView      : getView,
+            currentViewId: currentViewId
         };
     }
 );

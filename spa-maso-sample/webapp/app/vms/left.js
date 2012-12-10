@@ -1,6 +1,6 @@
 define(
-    ['jquery', 'knockout', 'knockout.mapping', 'data/data', 'infra/store', 'infra/util', 'nls/nls', 'models/models'],
-    function ($, ko, mapping, data, store, util, resources, models) {
+    ['jquery', 'knockout', 'knockout.mapping', 'data/data', 'infra/store', 'infra/util', 'nls/nls', 'models/models', 'infra/presenter', 'infra/config'],
+    function ($, ko, mapping, data, store, util, resources, models, presenter, config) {
         var
             posts        = ko.observableArray([]),
             selectedPost = ko.observable(),
@@ -27,7 +27,8 @@ define(
 
             onItemClick = function (item) {
                 selectedPost(item);
-                console.log('test' + selectedPost);
+                if (config.viewIds.postDetail !== presenter.currentViewId())
+                    return true;    // --> This will allow default event proceed so that you can navigate url as in href attribute
             }
         ;
         
