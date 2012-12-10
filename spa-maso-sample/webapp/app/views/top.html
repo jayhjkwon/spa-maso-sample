@@ -6,24 +6,27 @@
             <span class="icon-bar"></span>
         </a>
         <a class="brand" style="margin: 0 20px;" href="#">Ray's Blog</a>
-        <div class="nav-collapse collapse">
-            <ul class="nav">
-                <li data-bind="setActive:{}">
-                    <a href="#"><i class="icon-home"></i>&nbsp;&nbsp;Home</a>
-                </li>
-                <li class="divider-vertical"></li>
-                <li data-bind="setActive:{}"><a href="#/post/write"><i class="icon-pencil"></i>&nbsp;&nbsp;New Post</a></li>
-                <li class="divider-vertical"></li>
-                <li data-bind="setActive:{}"><a href="#/post/edit"><i class="icon-edit"></i>&nbsp;&nbsp;Edit Post</a></li>
-                <li class="divider-vertical"></li>
-                <li data-bind="setActive:{}"><a href="#/chat"><i class="icon-comment"></i>&nbsp;&nbsp;Chat</a></li>
-                <li class="divider-vertical"></li>
-                <li>
-                    <div class="navbar-search">
-                        <input type="text" class="search-query" placeholder="Search">
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <ul class="nav">
+            <li data-bind="setActive:{}">
+                <a href="#"><i class="icon-home"></i>&nbsp;&nbsp;Home</a>
+            </li>
+            <li data-bind="setActive:{}"><a href="#/post/write"><i class="icon-pencil"></i>&nbsp;&nbsp;New Post</a></li>
+            <li data-bind="setActive:{}"><a data-bind="attr: {href : '#/post/edit/' + id()}"><i class="icon-edit"></i>&nbsp;&nbsp;Edit Post</a></li>
+            <li data-bind="setActive:{}"><a href="#/chat"><i class="icon-comment"></i>&nbsp;&nbsp;Chat</a></li>
+            <li class="dropdown">
+                <a href="#"  class="dropdown-toggle" data-toggle="dropdown">Language<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Korean</a></li>
+                </ul>
+            </li>
+            <li class="divider-vertical"></li>
+            <li>
+                <div class="navbar-search">
+                    <input data-bind="value: searchText, valueUpdate: 'afterkeydown'" type="text" class="search-query" placeholder="Search">
+                </div>
+            </li>
+
+        </ul>
     </div>
 </div>

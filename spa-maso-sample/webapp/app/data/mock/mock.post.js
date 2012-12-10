@@ -12,7 +12,7 @@
                                 "content|10-30"     : "@LOREM_IPSUM",
                                 "timeCreated" : "@DATE_YYYY-@DATE_MM-@DATE_DD",
                                 "tags|1-5"    : ["@TAGS"],
-                                "comments|1-5": [
+                                "comments|0-5": [
                                     {
                                         "commenterFirstName": "@MALE_FIRST_NAME",
                                         "commentTime"       : "@DATE_YYYY-@DATE_MM-@DATE_DD @TIME_HH:@TIME_MM",
@@ -31,7 +31,7 @@
                                 "content|10-30"     : "@LOREM_IPSUM",
                                 "timeCreated" : "@DATE_YYYY-@DATE_MM-@DATE_DD",
                                 "tags|1-5"    : ["@TAGS"],
-                                "comments|1-5": [
+                                "comments|0-5": [
                                     {
                                         "commenterFirstName": "@MALE_FIRST_NAME",
                                         "commentTime"       : "@DATE_YYYY-@DATE_MM-@DATE_DD @TIME_HH:@TIME_MM",
@@ -83,6 +83,13 @@
                 });
 
                 amplify.request.define('savePost', function (request) {
+                    var post = request.data;
+                    post.id = 99999;
+                    post.timeCreated = moment().format('YYYY-MM-DD');
+                    request.success(post);
+                });
+                
+                amplify.request.define('updatePost', function (request) {
                     var post = request.data;
                     post.id = 99999;
                     post.timeCreated = moment().format('YYYY-MM-DD');

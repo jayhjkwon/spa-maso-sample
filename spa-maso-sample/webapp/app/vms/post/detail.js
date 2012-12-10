@@ -1,16 +1,14 @@
 ﻿define(
-    ['jquery', 'knockout', 'knockout.mapping', 'data/data', 'infra/store', 'infra/util', 'nls/nls', 'models/models', '../left'],
-    function ($, ko, mapping, data, store, util, resources, models, left) {
+    ['jquery', 'knockout', 'knockout.mapping', 'data/data', 'infra/store', 'infra/util', 'nls/nls', 'models/models'],
+    function ($, ko, mapping, data, store, util, resources, models) {
         var
             mappingOption = {
                 create: function (options) {
                     return new models.Post(options.data);
                 }
             },
-
             post = ko.observable(),
-            isCommentsExist = ko.observable(true);
-
+            
             getPost = function (param) {
                 if (!param.id)
                     return;
@@ -28,18 +26,8 @@
             }
         ;
 
-            left.selectedPost.subscribe(function (newVal) {
-                if (!newVal.comments)
-                    isCommentsExist(false);
-                else
-                    isCommentsExist(true);
-                console.log('test=' + isCommentsExist());
-                post(newVal);
-            });
-
         return {
-            post    : post,
-            getPost: getPost,
-            isCommentsExist : isCommentsExist
+            post   : post,
+            getPost: getPost
         };
     });

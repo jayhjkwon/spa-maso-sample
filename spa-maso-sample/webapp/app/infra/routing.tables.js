@@ -44,7 +44,8 @@
 			    view        : views.postEdit,
 			    viewPanel   : config.viewPanels.MAIN,
                 viewModel   : vms.postEdit,
-			    routes      : [config.hashes.postEdit]
+			    routes      : [config.hashes.postEdit],
+			    callback    : vms.postEdit.getPost
 			}
 	    
 			//// referral

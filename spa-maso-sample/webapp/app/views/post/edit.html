@@ -5,24 +5,24 @@
     
     <form>
         <div>
-            <input type="text" class="input-block-level" placeholder="Title" autofocus />
+            <input data-bind="value: title" type="text" class="input-block-level" placeholder="Title" autofocus />
         </div>
 
         <div>
-            <textarea class="input-block-level" rows="15"></textarea>
+            <textarea data-bind="value: content" class="input-block-level" rows="15"></textarea>
         </div>
         
         <div>
             <input type="text" 
                 data-provide="typeahead"
-                data-bind="typeahead:{}"
+                data-bind="typeahead:{}, value: tags"
                 class="input-block-level" 
                 placeholder = "Tag, Use comma delimiter for multiple tags" />
         </div>
 
         <div class="form-actions" align="center">
-            <button type="submit" class="btn btn-primary">Save</button>
-            <button type="button" class="btn">Reset</button>
+            <button data-bind="click: updatePost" type="button" class="btn btn-primary">Save</button>
+            <button data-bind="click: resetPost" type="button" class="btn">Reset</button>
         </div>
     </form>
 </section>
