@@ -1,10 +1,11 @@
-define(['./referral', './document', './post'],
-    function (Referral, Document, Post) {
+define(['./referral', './document', './post', './comment'],
+    function (Referral, Document, Post, Comment) {
 
         return {
             Referral:Referral,
             Document: Document,
-            Post: Post
+            Post: Post,
+            Comment: Comment
         };
     }
 );

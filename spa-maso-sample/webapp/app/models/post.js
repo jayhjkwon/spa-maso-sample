@@ -1,10 +1,22 @@
-﻿define(['knockout', 'knockout.mapping'],
-    function (ko, mapping) {
+﻿define(['knockout', 'knockout.mapping', 'moment', './comment'],
+    function (ko, mapping, moment, Comment) {
         var Post = function (data) {
 
             var self = this;
 
-            mapping.fromJS(data, {}, self);
+            var commentMappingOption = {
+                'comments': {
+                    create: function (options) {
+                        return new Comment(options.data);
+                    }
+                }
+            };
+
+            mapping.fromJS(data, commentMappingOption, self);
+            
+            self.yyyymmdd = ko.computed(function () {
+                return moment(self.timeCreated()).format('YYYY-MM-DD');
+            });
 
             self.shortTitle = ko.computed(function () {
                 if (self.title) {

@@ -7,14 +7,14 @@
                     postListTemplate = {
                         "postList|1-20": [
                             {
-                                "id|+1"       : 1,
-                                "title"       : "@TITLES",
+                                "id|+1"             : 1,
+                                "title"             : "@TITLES",
                                 "content|10-30"     : "@LOREM_IPSUM",
-                                "timeCreated" : "@DATE_YYYY-@DATE_MM-@DATE_DD",
-                                "tags|1-5"    : ["@TAGS"],
-                                "comments|0-5": [
+                                "timeCreated"       : "@DATE_YYYY-@DATE_MM-@DATE_DD @TIME_HH:@TIME_MM",
+                                "tags|1-5"          : ["@TAGS"],
+                                "comments|0-5"      : [
                                     {
-                                        "commenterFirstName": "@MALE_FIRST_NAME",
+                                        "commenterName"     : "@MALE_FIRST_NAME",
                                         "commentTime"       : "@DATE_YYYY-@DATE_MM-@DATE_DD @TIME_HH:@TIME_MM",
                                         "commentText"       : "@LOREM_IPSUM"
                                     }
@@ -26,14 +26,14 @@
                     postDetailTemplate = {
                         "post": 
                             {
-                                "id"          : "@NUMBER",
-                                "title"       : "@TITLES",
+                                "id"                : "@NUMBER",
+                                "title"             : "@TITLES",
                                 "content|10-30"     : "@LOREM_IPSUM",
-                                "timeCreated" : "@DATE_YYYY-@DATE_MM-@DATE_DD",
-                                "tags|1-5"    : ["@TAGS"],
-                                "comments|0-5": [
+                                "timeCreated"       : "@DATE_YYYY-@DATE_MM-@DATE_DD @TIME_HH:@TIME_MM",
+                                "tags|1-5"          : ["@TAGS"],
+                                "comments|0-5"      : [
                                     {
-                                        "commenterFirstName": "@MALE_FIRST_NAME",
+                                        "commenterName"     : "@MALE_FIRST_NAME",
                                         "commentTime"       : "@DATE_YYYY-@DATE_MM-@DATE_DD @TIME_HH:@TIME_MM",
                                         "commentText"       : "@LOREM_IPSUM"
                                     }
@@ -85,15 +85,22 @@
                 amplify.request.define('savePost', function (request) {
                     var post = request.data;
                     post.id = 99999;
-                    post.timeCreated = moment().format('YYYY-MM-DD');
+                    post.timeCreated = new Date();
                     request.success(post);
                 });
                 
                 amplify.request.define('updatePost', function (request) {
                     var post = request.data;
                     post.id = 99999;
-                    post.timeCreated = moment().format('YYYY-MM-DD');
+                    post.timeCreated = new Date();
                     request.success(post);
+                });
+
+                amplify.request.define('saveComment', function (request) {
+                    var comment = request.data;
+                    comment.id = 99999;
+                    comment.commentTime = new Date();
+                    request.success(comment);
                 });
 
             };

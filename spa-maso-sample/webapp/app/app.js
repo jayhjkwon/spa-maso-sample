@@ -7,11 +7,13 @@
         },
 
         paths: {
-            bootstrap: './jam/bootstrap/docs/assets/js/bootstrap'
+            bootstrap: './jam/bootstrap/docs/assets/js/bootstrap',
+            sammy: './jam/sammy/sammy'
         },
 
         shim: {
-            'bootstrap': ['jquery']
+            'bootstrap': ['jquery'],
+            'sammy' : ['jquery']
         }
     });
 
