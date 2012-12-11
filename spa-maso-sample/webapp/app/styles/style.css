@@ -46,65 +46,97 @@ label.error {
 /* end - validation style */
 /* page layout
 -----------------------------------------------------------*/
-div#top {
-  background-color: #445566;
-  height: 40px;
-  line-height: 40px;
-}
 div#left {
   position: absolute;
-  top: 40px;
-  right: auto;
-  bottom: 0px;
-  left: 0px;
-  width: 30px;
-  background-color: #778899;
-}
-div#titles {
-  position: absolute;
-  top: 40px;
+  top: 41px;
   right: auto;
   bottom: 0;
-  left: 30px;
-  width: 200px;
+  left: 0;
+  width: 300px;
   background-color: #ffffff;
-  -webkit-box-shadow: inset 0px 0px 5px 1px #888888;
-  -moz-box-shadow: inset 0px 0px 5px 1px #888888;
-  box-shadow: inset 0px 0px 5px 1px #888888;
   overflow-y: auto;
+  -webkit-box-shadow: 0 0 5px 2px #888888;
+  -moz-box-shadow: 0 0 5px 2px #888888;
+  box-shadow: 0 0 5px 2px #888888;
+  z-index: 100;
 }
 div#main {
   position: absolute;
-  top: 40px;
-  right: 0px;
-  bottom: 0px;
-  left: 230px;
+  top: 41px;
+  right: 0;
+  bottom: 0;
+  left: 300px;
   background-color: #ffffff;
   overflow-y: auto;
-  padding: 5px;
+  overflow-x: hidden;
+  padding: 10px;
 }
-div#top ul {
-  margin: 0px;
+div#top .navbar-search {
+  margin-left: 50px;
 }
-div#top ul li {
-  float: left;
-  width: 100px;
-  list-style: none;
+#left-div .nav-list > .active > a {
+  background-color: #3db1eb;
+  background-image: -moz-linear-gradient(top, #66ccff, #0088cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#66ccff), to(#0088cc));
+  background-image: -webkit-linear-gradient(top, #66ccff, #0088cc);
+  background-image: -o-linear-gradient(top, #66ccff, #0088cc);
+  background-image: linear-gradient(to bottom, #66ccff, #0088cc);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff66ccff', endColorstr='#ff0088cc', GradientType=0);
 }
-div#top ul li a {
-  color: #fff;
-  text-decoration: none;
+#left-div .nav li label {
+  cursor: pointer;
 }
-div#top ul label {
+#left-div .nav a {
   color: #000;
+  height: 80px;
+  border: 1px solid #e6e6e6;
+  margin: 10px -3px;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px #999999;
+  -moz-box-shadow: 0 0 5px #999999;
+  box-shadow: 0 0 5px #999999;
 }
-h2 {
-  font-size: 40px;
-  color: gray;
+#left-div .nav a label {
+  font-weight: bold;
 }
-/*section.view label {*/
-/*display: block;*/
-/*}*/input[type=text] {
+#left-div .nav a div.date-created {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+#left-div .nav a div.date-created label {
+  display: inline;
+  font-weight: normal;
+}
+#section-post-detail div.time-created {
+  margin-top: 30px;
+}
+#section-post-detail div.tags {
+  margin-top: 10px;
+}
+#section-post-detail div.comments {
+  margin-top: 15px;
+}
+#section-post-detail div.comments table {
+  margin-top: 10px;
+}
+#section-post-detail div.comments table td {
+  width: 100%;
+}
+#section-post-detail div.write-comment input[type=text] {
+  font-size: 1em;
+}
+#section-post-write input[type=text] {
+  font-size: 1em;
+}
+#section-post-edit input[type=text] {
+  font-size: 1em;
+}
+input[type=text] {
   font-size: 20px;
   color: #710909;
 }

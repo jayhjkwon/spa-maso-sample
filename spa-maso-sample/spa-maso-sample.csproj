@@ -567,6 +567,7 @@
     <Content Include="webapp\app\jam\sammy\sammy.js" />
     <Content Include="webapp\app\jam\text\text.js" />
     <Content Include="webapp\app\jam\underscore\underscore.js" />
+    <Content Include="webapp\app\models\comment.js" />
     <Content Include="webapp\app\models\document.js" />
     <Content Include="webapp\app\models\models.js" />
     <Content Include="webapp\app\models\post.js" />
@@ -909,6 +910,7 @@
     <Content Include="webapp\app\jam\moment\Makefile" />
     <Content Include="webapp\app\jam\moment\package.json" />
     <Content Include="webapp\app\jam\moment\readme.md" />
+    <Content Include="webapp\tools\optimizer\compile.less.bat" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
