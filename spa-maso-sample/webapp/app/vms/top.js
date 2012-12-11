@@ -1,16 +1,21 @@
 define(
-    ['nls/nls', 'infra/store', 'knockout', './post/detail'],
-    function (resources, store, ko, detail) {
+    ['nls/nls', 'infra/store', 'knockout', './post/detail', 'nls/nls'],
+    function (resources, store, ko, detail, resources) {
         var
-            searchText = ko.observable(''),
-            id         = ko.observable(''),
-            
-            useEnglish = function () {
+            labelHome     = resources.labelHome,
+            labelNewPost  = resources.labelNewPost,
+            labelEditPost = resources.labelEditPost,
+            labelChat     = resources.labelChat
+        ;
+
+        var 
+            searchText    = ko.observable(''),
+            id            = ko.observable(''),
+            useEnglish    = function () {
                 store.save('locale', 'en');
                 window.location.reload();
             },
-
-            useKorean = function () {
+            useKorean     = function () {
                 store.save('locale', 'ko-kr');
                 window.location.reload();
             }
@@ -21,10 +26,14 @@ define(
         });
 
         return {
-            useEnglish   : useEnglish,
-            useKorean    : useKorean,
-            searchText   : searchText,
-            id           : id
+            labelHome     : labelHome,    
+            labelNewPost  : labelNewPost, 
+            labelEditPost : labelEditPost,
+            labelChat     : labelChat,    
+            useEnglish    : useEnglish,
+            useKorean     : useKorean,
+            searchText    : searchText,
+            id            : id
         };
     }
 );
