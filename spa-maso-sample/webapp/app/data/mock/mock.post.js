@@ -77,9 +77,11 @@
                 });
 
                 amplify.request.define('postDetail', function (request) {
-                    var post = $.mockJSON.generateFromTemplate(postDetailTemplate).post;
-                    post.id = request.data;
-                    request.success(post);
+                    setTimeout(function() {
+                        var post = $.mockJSON.generateFromTemplate(postDetailTemplate).post;
+                        post.id = request.data;
+                        request.success(post);
+                    }, 100);
                 });
 
                 amplify.request.define('savePost', function (request) {

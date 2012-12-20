@@ -1,11 +1,6 @@
 var jam = {
     "packages": [
         {
-            "name": "activity",
-            "location": "jam/activity.indicator",
-            "main": "activity-indicator.js"
-        },
-        {
             "name": "amplify",
             "location": "jam/amplify",
             "main": "amplify.js"

@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace spa_maso_sample
+namespace SpaMasoSample
 {
     public class FilterConfig
     {

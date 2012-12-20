@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace spa_maso_sample
+namespace SpaMasoSample
 {
     public static class WebApiConfig
     {

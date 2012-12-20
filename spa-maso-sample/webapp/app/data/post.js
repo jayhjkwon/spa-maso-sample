@@ -4,19 +4,19 @@
         var
             init = function () {
                 amplify.request.define('postList', 'ajax', {
-                    url: 'api/post',
+                    url: 'api/posts',
                     dataType: 'json',
                     type: 'GET'
                 });
 
                 amplify.request.define('postDetail', 'ajax', {
-                    url: 'api/post/{id}',
+                    url: 'api/posts/{id}',
                     dataType: 'json',
                     type: 'GET'
                 });
 
                 amplify.request.define('savePost', 'ajax', {
-                    url: 'api/post',
+                    url: 'api/posts',
                     dataType: 'json',
                     type: 'POST'
                 });

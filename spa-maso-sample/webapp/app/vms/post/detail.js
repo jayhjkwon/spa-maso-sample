@@ -16,6 +16,8 @@
                     return;
                 // TODO : raise an error message using toastr when no param.id provided
 
+                //util.toggleActivity(true);
+
                 $.when(data.deferredRequest('postDetail', param.id))
                     .done(function (result) {
                         post(mapping.fromJS(result, mappingOption));
@@ -24,7 +26,11 @@
                     })
                     .fail(function (data, status) {
                         console.log('error: ' + status);
+                    })
+                    .always(function() {
+                        //util.toggleActivity(false);
                     });
+                
             },
 
             saveComment = function () {
@@ -34,9 +40,9 @@
                 }))
                 .done(function (result) {
                     post().comments.push(new models.Comment({
-                        commenterName: result.commenterName,
-                        commentText  : result.commentText,
-                        commentTime: result.commentTime
+                        commenterName   : result.commenterName,
+                        commentText     : result.commentText,
+                        commentTime     : result.commentTime
                     }));
                 });
             }

@@ -50,7 +50,7 @@
                         }
 
                         request.success(referrals);
-                    }, 2000);
+                    }, 100);
                 });
 
                 amplify.request.define('referral', function (request) {

@@ -11,7 +11,7 @@
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>spa_maso_sample</RootNamespace>
+    <RootNamespace>SpaMasoSample</RootNamespace>
     <AssemblyName>spa-maso-sample</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
@@ -126,11 +126,17 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\JsonCamelCaseConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BlogContext.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\Tag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -220,8 +226,6 @@
     <Content Include="webapp\app\infra\routing.tables.js" />
     <Content Include="webapp\app\infra\store.js" />
     <Content Include="webapp\app\infra\util.js" />
-    <Content Include="webapp\app\jam\activity.indicator\activity-indicator.js" />
-    <Content Include="webapp\app\jam\activity.indicator\MIT-LICENSE.txt" />
     <Content Include="webapp\app\jam\amplify\amplify.js" />
     <Content Include="webapp\app\jam\bootstrap\.issue-guidelines.js" />
     <Content Include="webapp\app\jam\bootstrap\docs\assets\css\bootstrap-responsive.css" />
@@ -733,11 +737,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="webapp\app\jam\activity.indicator\package.json" />
     <Content Include="webapp\app\jam\amplify\package.json" />
     <Content Include="webapp\app\jam\domReady\.swp" />
     <Content Include="webapp\app\jam\domReady\LICENSE" />
@@ -914,8 +913,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

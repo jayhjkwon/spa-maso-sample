@@ -7,13 +7,17 @@
         },
 
         paths: {
-            bootstrap: './jam/bootstrap/docs/assets/js/bootstrap',
-            sammy: './jam/sammy/sammy'
+            'bootstrap' : './jam/bootstrap/docs/assets/js/bootstrap',
+            'sammy'     : './jam/sammy/sammy',
         },
 
         shim: {
-            'bootstrap': ['jquery'],
-            'sammy' : ['jquery']
+            'bootstrap'         : ['jquery'],
+            'amplify'           : { deps: ['jquery'], exports: 'amplify' },
+            'sammy'             : { deps: ['jquery'], exports: 'Sammy' },
+            'jquery-validation' : ['jquery'],
+            'mockJson'          : ['jquery'],
+            'underscore'        : { exports: '_' },
         }
     });
 
@@ -29,14 +33,12 @@
         function (dom, $, router, config, tables, bindings, mocks) {
             var
                 init = function () {
-
                     if (config.useMock) {
                         mocks.init();
                     }
                 };
 
             init();
-
             router.run(tables);
         }
     );

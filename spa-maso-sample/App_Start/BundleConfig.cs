@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace spa_maso_sample
+namespace SpaMasoSample
 {
     public class BundleConfig
     {
