@@ -33,7 +33,7 @@
 
             locale = 'en';  // 'ko-kr' for Korean, 'en' for English
 
-            useMock = true;     // use mock request, not real request
+            useMock = false;     // use mock request, not real request
 
         return {
             viewPanels     : viewPanels,

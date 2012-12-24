@@ -18,7 +18,7 @@
 
                 //util.toggleActivity(true);
 
-                $.when(data.deferredRequest('postDetail', param.id))
+                $.when(data.deferredRequest('postDetail', { id: param.id }))
                     .done(function (result) {
                         post(mapping.fromJS(result, mappingOption));
                         if ($.isFunction(param))

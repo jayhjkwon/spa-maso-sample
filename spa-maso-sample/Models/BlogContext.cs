@@ -10,6 +10,11 @@ namespace SpaMasoSample.Models
     {
         public BlogContext()
         {
+            this.Configuration.ProxyCreationEnabled  = false;
+            this.Configuration.LazyLoadingEnabled    = false;
+            this.Configuration.ValidateOnSaveEnabled = false;
+
+            Database.SetInitializer(new BlogContextInitializer());
         }
 
         public DbSet<Post> Posts { get; set; }

@@ -19,13 +19,14 @@ namespace SpaMasoSample.Controllers
         // GET api/Posts
         public IEnumerable<Post> GetPosts()
         {
-            return _db.Posts.AsEnumerable();
+            var posts = _db.Posts.Include(p=>p.Tags).Include(p=>p.Comments).AsEnumerable();
+            return posts;
         }
 
         // GET api/Posts/5
         public Post GetPost(int id)
         {
-            var post = _db.Posts.Find(id);
+            var post = _db.Posts.Include(p => p.Tags).Include(p => p.Comments).FirstOrDefault(p=>p.Id.Equals(id));
             if (post == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));

@@ -10,7 +10,7 @@
                                 "id|+1"             : 1,
                                 "title"             : "@TITLES",
                                 "content|10-30"     : "@LOREM_IPSUM",
-                                "timeCreated"       : "@DATE_YYYY-@DATE_MM-@DATE_DD @TIME_HH:@TIME_MM",
+                                "dateCreated"       : "@DATE_YYYY-@DATE_MM-@DATE_DD @TIME_HH:@TIME_MM",
                                 "tags|1-5"          : ["@TAGS"],
                                 "comments|0-5"      : [
                                     {
@@ -29,7 +29,7 @@
                                 "id"                : "@NUMBER",
                                 "title"             : "@TITLES",
                                 "content|10-30"     : "@LOREM_IPSUM",
-                                "timeCreated"       : "@DATE_YYYY-@DATE_MM-@DATE_DD @TIME_HH:@TIME_MM",
+                                "dateCreated"       : "@DATE_YYYY-@DATE_MM-@DATE_DD @TIME_HH:@TIME_MM",
                                 "tags|1-5"          : ["@TAGS"],
                                 "comments|0-5"      : [
                                     {
@@ -79,7 +79,7 @@
                 amplify.request.define('postDetail', function (request) {
                     setTimeout(function() {
                         var post = $.mockJSON.generateFromTemplate(postDetailTemplate).post;
-                        post.id = request.data;
+                        post.id = request.data.id;
                         request.success(post);
                     }, 100);
                 });
@@ -87,14 +87,14 @@
                 amplify.request.define('savePost', function (request) {
                     var post = request.data;
                     post.id = 99999;
-                    post.timeCreated = new Date();
+                    post.dateCreated = new Date();
                     request.success(post);
                 });
                 
                 amplify.request.define('updatePost', function (request) {
                     var post = request.data;
                     post.id = 99999;
-                    post.timeCreated = new Date();
+                    post.dateCreated = new Date();
                     request.success(post);
                 });
 

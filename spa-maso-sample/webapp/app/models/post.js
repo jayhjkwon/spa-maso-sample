@@ -15,7 +15,7 @@
             mapping.fromJS(data, commentMappingOption, self);
             
             self.yyyymmdd = ko.computed(function () {
-                return moment(self.timeCreated()).format('YYYY-MM-DD');
+                return moment(self.dateCreated()).format('YYYY-MM-DD');
             });
 
             self.shortTitle = ko.computed(function () {
