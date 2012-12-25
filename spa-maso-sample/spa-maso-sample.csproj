@@ -211,10 +211,8 @@
     <Content Include="webapp\app\bindings\validate.patient.js" />
     <Content Include="webapp\app\data\data.js" />
     <Content Include="webapp\app\data\mock\mock.post.js" />
-    <Content Include="webapp\app\data\mock\mock.referral.js" />
     <Content Include="webapp\app\data\mock\mocks.js" />
     <Content Include="webapp\app\data\post.js" />
-    <Content Include="webapp\app\data\referral.js" />
     <Content Include="webapp\app\images\ajax-loader-1.gif" />
     <Content Include="webapp\app\images\ajax-loader-2.gif" />
     <Content Include="webapp\app\images\ajax-loader-3.gif" />
@@ -576,10 +574,8 @@
     <Content Include="webapp\app\jam\text\text.js" />
     <Content Include="webapp\app\jam\underscore\underscore.js" />
     <Content Include="webapp\app\models\comment.js" />
-    <Content Include="webapp\app\models\document.js" />
     <Content Include="webapp\app\models\models.js" />
     <Content Include="webapp\app\models\post.js" />
-    <Content Include="webapp\app\models\referral.js" />
     <Content Include="webapp\app\nls\ko-kr\resources.js" />
     <Content Include="webapp\app\nls\nls.js" />
     <Content Include="webapp\app\nls\resources.js" />
@@ -667,7 +663,6 @@
     <Content Include="webapp\app\views\post\detail.html" />
     <Content Include="webapp\app\views\post\edit.html" />
     <Content Include="webapp\app\views\post\write.html" />
-    <Content Include="webapp\app\views\referrals.html" />
     <Content Include="webapp\app\views\top.html" />
     <Content Include="webapp\app\views\views.js" />
     <Content Include="webapp\app\vms\left.js" />
