@@ -46,7 +46,7 @@
 
             run = function (routingTables) {
                 registerTables(routingTables);
-                app.run(config.hashes.postDetail);
+                app.run(config.hashes.home);
             };
 
 

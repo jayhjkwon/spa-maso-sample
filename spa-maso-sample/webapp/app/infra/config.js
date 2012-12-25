@@ -14,18 +14,14 @@
                 top       : '#top-div',
                 left      : '#left-div',
                 referral  : '#referral-div',
-                patient   : '#patient-div',
-                document  : '#document-div',
                 postDetail: '#section-post-detail',
                 postWrite : '#section-post-write',
                 postEdit  : '#section-post-edit'
             },
 
             hashes = {
-                home      : '',
+                home      : '#/',
                 referral  : '#/referrals',
-                patient   : '#/patients',
-                document  : '#/documents',
                 postDetail: '#/post/detail/:id',
                 postWrite : '#/post/write',
                 postEdit  : '#/post/edit/:id'
@@ -33,7 +29,7 @@
 
             locale = 'en';  // 'ko-kr' for Korean, 'en' for English
 
-            useMock = false;     // use mock request, not real request
+            useMock = true;     // use mock request, not real request
 
         return {
             viewPanels     : viewPanels,

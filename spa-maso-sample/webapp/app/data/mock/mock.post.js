@@ -11,7 +11,7 @@
                                 "title"             : "@TITLES",
                                 "content|10-30"     : "@LOREM_IPSUM",
                                 "dateCreated"       : "@DATE_YYYY-@DATE_MM-@DATE_DD @TIME_HH:@TIME_MM",
-                                "tags|1-5"          : ["@TAGS"],
+                                "tags|1-5"          : [{ "tagText" : "@TAGS" }],
                                 "comments|0-5"      : [
                                     {
                                         "commenterName"     : "@MALE_FIRST_NAME",
@@ -30,7 +30,7 @@
                                 "title"             : "@TITLES",
                                 "content|10-30"     : "@LOREM_IPSUM",
                                 "dateCreated"       : "@DATE_YYYY-@DATE_MM-@DATE_DD @TIME_HH:@TIME_MM",
-                                "tags|1-5"          : ["@TAGS"],
+                                "tags|1-5"          : [{ "tagText" : "@TAGS" }],
                                 "comments|0-5"      : [
                                     {
                                         "commenterName"     : "@MALE_FIRST_NAME",

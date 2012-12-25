@@ -6,8 +6,8 @@
  */
 
 define(
-    ['./referral', './post'],
-    function (referral) {
+    ['./post'],
+    function (post) {
         var
             deferredRequest = function (resourceId, data) {
                 return new $.Deferred(function (dfd) {

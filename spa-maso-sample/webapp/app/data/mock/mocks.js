@@ -1,8 +1,7 @@
 ﻿define(
-    ['./mock.referral', './mock.post'],
-    function (referral, post) {
+    ['./mock.post'],
+    function (post) {
         var init = function () {
-            referral.init();
             post.init();
         };
 
