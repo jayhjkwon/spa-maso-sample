@@ -4,7 +4,7 @@
 
             var self = this;
 
-            var commentMappingOption = {
+            var mappingOption = {
                 'comments': {
                     create: function (options) {
                         return new Comment(options.data);
@@ -12,7 +12,7 @@
                 }
             };
 
-            mapping.fromJS(data, commentMappingOption, self);
+            mapping.fromJS(data, mappingOption, self);
             
             self.yyyymmdd = ko.computed(function () {
                 return moment(self.dateCreated()).format('YYYY-MM-DD');
