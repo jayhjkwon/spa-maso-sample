@@ -132,6 +132,7 @@
     <Compile Include="App_Start\JsonCamelCaseConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -200,6 +201,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Views\Home\Index.aspx" />
     <Content Include="webapp\app\app.js" />
     <Content Include="webapp\app\app.min.js" />
     <Content Include="webapp\app\bindings\bindings.js" />
@@ -672,7 +674,6 @@
     <Content Include="webapp\app\vms\referrals.js" />
     <Content Include="webapp\app\vms\top.js" />
     <Content Include="webapp\app\vms\vms.js" />
-    <Content Include="index.html" />
     <Content Include="webapp\tests\index.html" />
     <Content Include="webapp\tests\qunit\qunit-composite.css" />
     <Content Include="webapp\tests\qunit\qunit-composite.js" />
@@ -713,6 +714,8 @@
     <Content Include="webapp\tools\documentation\docs\modules\index.html" />
     <Content Include="webapp\tools\optimizer\css.build.js" />
     <Content Include="webapp\tools\optimizer\r.js" />
+    <None Include="Properties\PublishProfiles\masospa - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\masospa - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -909,6 +912,7 @@
     <Content Include="webapp\app\jam\moment\package.json" />
     <Content Include="webapp\app\jam\moment\readme.md" />
     <Content Include="webapp\tools\optimizer\compile.less.bat" />
+    <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
