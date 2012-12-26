@@ -324,6 +324,9 @@
     <Content Include="webapp\app\jam\domReady\domReady.js" />
     <Content Include="webapp\app\jam\i18n\i18n.js" />
     <Content Include="webapp\app\jam\jquery-validation\jquery.validate.js" />
+    <Content Include="webapp\app\test.js" />
+    <Content Include="webapp\_references.js" />
+    <None Include="webapp\app\jam\jquery\jquery.intellisense.js" />
     <Content Include="webapp\app\jam\jquery\jquery.js" />
     <Content Include="webapp\app\jam\knockout.mapping\knockout.mapping.js" />
     <Content Include="webapp\app\jam\knockout\knockout.js" />
@@ -571,6 +574,7 @@
     <Content Include="webapp\app\jam\moment\test\moment\utc.js" />
     <Content Include="webapp\app\jam\moment\test\zone.js" />
     <Content Include="webapp\app\jam\require.config.js" />
+    <None Include="webapp\app\jam\require.intellisense.js" />
     <Content Include="webapp\app\jam\require.js" />
     <Content Include="webapp\app\jam\sammy\sammy.js" />
     <Content Include="webapp\app\jam\text\text.js" />
@@ -716,22 +720,6 @@
     <Content Include="webapp\tools\optimizer\r.js" />
     <None Include="Properties\PublishProfiles\masospa - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\masospa - Web Deploy.pubxml" />
-    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
-    <Content Include="Scripts\jquery-1.7.1.js" />
-    <Content Include="Scripts\jquery-1.7.1.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-ui-1.8.20.js" />
-    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-2.1.0.debug.js" />
-    <Content Include="Scripts\knockout-2.1.0.js" />
-    <Content Include="Scripts\modernizr-2.5.3.js" />
-    <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

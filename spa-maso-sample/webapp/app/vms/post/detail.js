@@ -17,7 +17,7 @@
                 // TODO : raise an error message using toastr when no param.id provided
 
                 //util.toggleActivity(true);
-
+                
                 $.when(data.deferredRequest('postDetail', { id: param.id }))
                     .done(function (result) {
                         post(mapping.fromJS(result, mappingOption));

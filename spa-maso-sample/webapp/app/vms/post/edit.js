@@ -25,7 +25,7 @@
                 if (!param.id)
                     return;
                 // TODO : raise an error message using toastr when no param.id provided
-
+                
                 $.when(data.deferredRequest('postDetail', { id: param.id }))
                     .done(function (result) {
                         title(result.title);
