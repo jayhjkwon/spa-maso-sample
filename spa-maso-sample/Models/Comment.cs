@@ -13,7 +13,6 @@ namespace SpaMasoSample.Models
         [Required]
         public string CommenterName { get; set; }
 
-        [Required]
         public DateTime CommentTime { get; set; }
 
         [Required]

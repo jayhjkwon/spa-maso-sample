@@ -68,6 +68,7 @@ namespace SpaMasoSample.Controllers
             }
             else
             {
+                post.DateCreated = DateTime.Now;
                 _db.Posts.Add(post);
                 _db.SaveChanges();
 

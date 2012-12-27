@@ -14,9 +14,9 @@
 
             writePost = function () {
                 $.when(data.deferredRequest('savePost', {
-                    title: title(),
+                    title  : title(),
                     content: content(),
-                    tags: tags()
+                    tags   : ko.toJSON(tags)// tags().split(', ')
                 }))
                 .done(function(result){
                     left.posts.unshift(mapping.fromJS(result, postMappingOption));

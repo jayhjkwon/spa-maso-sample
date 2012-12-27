@@ -22,6 +22,10 @@ namespace SpaMasoSample
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             JsonConfig.RegisterConfig(GlobalConfiguration.Configuration);
+
+            //GlobalConfiguration.Configuration.Services.RemoveAll(
+            //    typeof(System.Web.Http.Validation.ModelValidatorProvider),
+            //    v => v is System.Web.Http.Validation.Providers.InvalidModelValidatorProvider);
         }
     }
 }

@@ -23,7 +23,6 @@ namespace SpaMasoSample.Models
         [Required]
         public string Content { get; set; }
 
-        [Required]
         public DateTime DateCreated { get; set; }
 
         public virtual ICollection<Tag> Tags { get; set; }
