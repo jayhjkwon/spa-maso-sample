@@ -21,8 +21,7 @@ namespace SpaMasoSample
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
-            JsonCamelCaseConfig.RegisterConfig(GlobalConfiguration.Configuration);
+            JsonConfig.RegisterConfig(GlobalConfiguration.Configuration);
         }
     }
 }

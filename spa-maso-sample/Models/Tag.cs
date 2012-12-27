@@ -15,7 +15,7 @@ namespace SpaMasoSample.Models
         public int Id { get; set; }
 
         [MaxLength(125)]
-        public string TagText { get; set; } // unique key
+        public string TagText { get; set; } 
         public virtual ICollection<Post> Posts { get; set; }
     }
 }
