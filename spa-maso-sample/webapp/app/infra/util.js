@@ -4,15 +4,21 @@
         var
             toggleActivity = function (show) {
 
-                if (show){
+                if (show) {
                     $('#busyindicator').addClass('modal');
-                }else{
+                } else {
                     $('#busyindicator').removeClass('modal');
                 }
-            };
+            },
+
+            trim = function (str) {
+                return str.replace(/^\s+|\s+$/g, '');
+            }
+        ;
 
         return {
-            toggleActivity: toggleActivity
+            toggleActivity: toggleActivity,
+            trim: trim
         };
     }
 );

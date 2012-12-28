@@ -19,14 +19,14 @@ namespace SpaMasoSample.Controllers
         // GET api/Posts
         public IEnumerable<Post> GetPosts()
         {
-            var posts = _db.Posts.Include(p=>p.Tags).Include(p=>p.Comments).AsEnumerable();
+            var posts = _db.Posts.Include(p => p.Tags).Include(p => p.Comments).AsEnumerable();
             return posts;
         }
 
         // GET api/Posts/5
         public Post GetPost(int id)
         {
-            var post = _db.Posts.Include(p => p.Tags).Include(p => p.Comments).FirstOrDefault(p=>p.Id.Equals(id));
+            var post = _db.Posts.Include(p => p.Tags).Include(p => p.Comments).FirstOrDefault(p => p.Id.Equals(id));
             if (post == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
@@ -62,19 +62,38 @@ namespace SpaMasoSample.Controllers
         // POST api/Posts
         public HttpResponseMessage PostPost(Post post)
         {
-            if (!ModelState.IsValid)
-            {
-                return Request.CreateResponse(HttpStatusCode.BadRequest);
-            }
-            else
-            {
-                post.DateCreated = DateTime.Now;
-                _db.Posts.Add(post);
-                _db.SaveChanges();
+            post.DateCreated = DateTime.Now;
+            UpdateTag(post);
+            _db.Posts.Add(post);
+            _db.SaveChanges();
 
-                var response = Request.CreateResponse(HttpStatusCode.Created, post);
-                response.Headers.Location = new Uri(Url.Link("DefaultApi", new {id = post.Id}));
-                return response;
+            var response = Request.CreateResponse(HttpStatusCode.Created, post);
+            response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = post.Id }));
+            return response;
+        }
+
+        // update or insert tag depend if tag exist or not
+        private void UpdateTag(Post post)
+        {
+            var tagList = post.Tags.ToList();
+            post.Tags.Clear();
+
+            foreach (var tag in tagList)
+            {
+                var tagText = tag.TagText.Trim();
+
+                if (!string.IsNullOrWhiteSpace(tagText))
+                {
+                    var cnt = _db.Tags.Count(t => t.TagText == tagText);
+                    if (cnt > 0)
+                    {
+                        post.Tags.Add(_db.Tags.First(t => t.TagText == tagText));
+                    }
+                    else
+                    {
+                        post.Tags.Add(new Tag { TagText = tagText });
+                    }
+                }
             }
         }
 
