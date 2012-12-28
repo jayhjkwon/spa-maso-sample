@@ -1,11 +1,11 @@
-﻿define(['./validate.patient',
+﻿define(['./validate.post',
         './resizeLeftMain',
         './typeahead',
         './setActive'
     ],
-    function (validatePatient, resizeLeftMain, typeahead, setActive) {
+    function (validatePost, resizeLeftMain, typeahead, setActive) {
         return {
-            validatePatient: validatePatient,
+            validatePost: validatePost,
             resizeLeftMain: resizeLeftMain,
             typeahead: typeahead,
             setActive: setActive

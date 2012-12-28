@@ -1,6 +1,6 @@
 ﻿define(
-    ['jquery', 'knockout', 'knockout.mapping', 'data/data', '../left', 'models/models', 'infra/util'],
-    function ($, ko, mapping, data, left, models, util) {
+    ['jquery', 'knockout', 'knockout.mapping', 'data/data', '../left', 'models/models', 'infra/util', 'jquery-validation'],
+    function ($, ko, mapping, data, left, models, util, val) {
         var
             title   = ko.observable(),
             content = ko.observable(),
@@ -13,17 +13,23 @@
             },
 
             writePost = function () {
+                if (!$('form').valid()) {
+                    return false;
+                }
+
                 $.when(data.deferredRequest('savePost', {
                     title  : title(),
                     content: content(),
                     tags: getTagAsArray(tags())
                 }))
-                .done(function(result){
+                .done(function (result) {
+                    resetPost();
                     left.posts.unshift(mapping.fromJS(result, postMappingOption));
                 });
             },
 
             getTagAsArray = function (tagString) {
+                if (!tagString) return;
                 var t = tagString.split(','),
                     tagArray = [];
                 if (t.length>1) t.pop();    // remove the last array element

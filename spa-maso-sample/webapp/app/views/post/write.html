@@ -3,13 +3,13 @@
         <h3>New Post</h3>
     </div>
 
-    <form>
+    <form data-bind="validatePost:{}">
         <div>
-            <input data-bind="value: title" type="text" class="input-block-level" placeholder="Title" autofocus />
+            <input data-bind="value: title" type="text" name="title" class="input-block-level" placeholder="Title" autofocus />
         </div>
 
         <div>
-            <textarea data-bind="value: content" class="input-block-level" rows="15"></textarea>
+            <textarea data-bind="value: content" name="content" class="input-block-level" rows="15"></textarea>
         </div>
         
         <div>
