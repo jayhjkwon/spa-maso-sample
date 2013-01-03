@@ -31,15 +31,12 @@
             getTagAsArray = function (tagString) {
                 if (!tagString) return;
 
-                var t = tagString.split(','),
-                    tagArray = [];
-                
-                for (var i = 0; i < t.length; i++) {
-                    if ($.trim(t[i]) !== '')
-                        tagArray.push({ tagText: $.trim(t[i]) });
-                }
+                var tagArray = [];
 
-                return tagArray;
+                return $.map(tagString.split(","), function (val) {
+                    if ($.trim(val) !== '')
+                        return tagArray.push({ tagText: $.trim(val) });
+                });
             },
 
             resetPost = function () {
