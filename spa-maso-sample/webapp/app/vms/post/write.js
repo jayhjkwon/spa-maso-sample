@@ -30,11 +30,13 @@
 
             getTagAsArray = function (tagString) {
                 if (!tagString) return;
+
                 var t = tagString.split(','),
                     tagArray = [];
-                if (t.length>1) t.pop();    // remove the last array element
+                
                 for (var i = 0; i < t.length; i++) {
-                    tagArray.push({ tagText: util.trim(t[i]) });
+                    if ($.trim(t[i]) !== '')
+                        tagArray.push({ tagText: $.trim(t[i]) });
                 }
 
                 return tagArray;
