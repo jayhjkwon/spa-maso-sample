@@ -12,7 +12,7 @@ namespace SpaMasoSample.Models
         {
             Configuration.ProxyCreationEnabled  = false;
             Configuration.LazyLoadingEnabled    = false;
-            //Configuration.ValidateOnSaveEnabled = false;
+            Configuration.ValidateOnSaveEnabled = false;
 
             Database.SetInitializer(new BlogContextInitializer());
         }

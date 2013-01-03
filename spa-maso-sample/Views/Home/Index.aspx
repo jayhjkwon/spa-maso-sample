@@ -31,10 +31,9 @@
 </head>
 <body data-bind="resizeLeftMain: {}">
 
-
+    <div id="busyindicator"></div>
     <div id="top" class="navbar navbar-inverse navbar-fixed-top"></div>
     <div id="left"></div>
-    <div id="busyindicator"></div>
     <div id="main"></div>
 
     <!-- Development Mode -->
