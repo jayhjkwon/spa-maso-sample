@@ -18,11 +18,43 @@ namespace SpaMasoSample.Models
             var tag1 = new Tag {Id = 1, TagText = "asp.net"};
             var tag2 = new Tag {Id = 2, TagText = "javascript"};
             var tag3 = new Tag {Id = 3, TagText = "knockoutjs"};
-            var tag4 = new Tag { Id = 4, TagText = "nodejs" };
-            blog.Tags.Add(tag1);
-            blog.Tags.Add(tag2);
-            blog.Tags.Add(tag3);
-            blog.Tags.Add(tag4);
+            var tag4 = new Tag { Id = 4, TagText   = "AppleScript" };
+            var tag5 = new Tag { Id = 5, TagText   = "Asp" };
+            var tag6 = new Tag { Id = 6, TagText   = "BASIC" };
+            var tag7 = new Tag { Id = 7, TagText   = "C" };
+            var tag8 = new Tag { Id = 8, TagText   = "C++" };
+            var tag9 = new Tag { Id = 9, TagText   = "Clojure" };
+            var tag10 = new Tag { Id = 10, TagText = "COBOL" };
+            var tag11 = new Tag { Id = 11, TagText = "ColdFusion" };
+            var tag12 = new Tag { Id = 12, TagText = "Erlang" };
+            var tag13 = new Tag { Id = 13, TagText = "Fortran" };
+            var tag14 = new Tag { Id = 14, TagText = "Groovy" };
+            var tag15 = new Tag { Id = 15, TagText = "Haskell" };
+            var tag16 = new Tag { Id = 16, TagText = "Java" };
+            var tag17 = new Tag { Id = 17, TagText = "JavaScript" };
+            var tag18 = new Tag { Id = 18, TagText = "Lisp" };
+            var tag19 = new Tag { Id = 19, TagText = "Perl" };
+            var tag20 = new Tag { Id = 20, TagText = "PHP" };
+            blog.Tags.Add(tag1);                      
+            blog.Tags.Add(tag2);                      
+            blog.Tags.Add(tag3);                      
+            blog.Tags.Add(tag4);                      
+            blog.Tags.Add(tag5);
+            blog.Tags.Add(tag6);
+            blog.Tags.Add(tag7);
+            blog.Tags.Add(tag8);
+            blog.Tags.Add(tag9);
+            blog.Tags.Add(tag10);
+            blog.Tags.Add(tag11);
+            blog.Tags.Add(tag12);
+            blog.Tags.Add(tag13);
+            blog.Tags.Add(tag14);
+            blog.Tags.Add(tag15);
+            blog.Tags.Add(tag16);
+            blog.Tags.Add(tag17);
+            blog.Tags.Add(tag18);
+            blog.Tags.Add(tag19);
+            blog.Tags.Add(tag20);
 
             var post1 = 
                 new Post

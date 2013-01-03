@@ -134,6 +134,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
+    <Compile Include="Controllers\TagsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -213,8 +214,10 @@
     <Content Include="webapp\app\bindings\validate.post.js" />
     <Content Include="webapp\app\data\data.js" />
     <Content Include="webapp\app\data\mock\mock.post.js" />
+    <Content Include="webapp\app\data\mock\mock.tag.js" />
     <Content Include="webapp\app\data\mock\mocks.js" />
     <Content Include="webapp\app\data\post.js" />
+    <Content Include="webapp\app\data\tag.js" />
     <Content Include="webapp\app\images\ajax-loader-1.gif" />
     <Content Include="webapp\app\images\ajax-loader-2.gif" />
     <Content Include="webapp\app\images\ajax-loader-3.gif" />

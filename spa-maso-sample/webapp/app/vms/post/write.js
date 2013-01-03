@@ -5,6 +5,7 @@
             title   = ko.observable(),
             content = ko.observable(),
             tags    = ko.observable(),
+            allTags = [],
 
             postMappingOption = {
                 create: function (options) {
@@ -35,7 +36,7 @@
 
                 $.map(tagString.split(","), function (val) {
                     if ($.trim(val) !== '')
-                        return tagArray.push({ tagText: $.trim(val) });
+                        tagArray.push({ tagText: $.trim(val) });
                 });
                 return tagArray;
             },
@@ -44,13 +45,37 @@
                 title('');
                 content('');
                 tags('');
-            }
+            },
+
+            getAllTags = function (param) {
+                $.when(data.deferredRequest('tagList'))
+                    .done(function (tagList) {
+                        allTags.length = 0;
+                        $.map(tagList, function (val) {
+                            allTags.push( val.tagText);
+                        });
+
+                        if ($.isFunction(param))
+                            param(allTags);
+                    })
+                    .fail(function (data, status) {
+                        console.log('error: ' + status);
+                    });
+            },
+
+            init = function () {
+                //get all tags for typeahead
+                getAllTags();  
+            }            
         ;
+
+        init();
 
         return {
             title    : title,
             content  : content,
             tags     : tags,
+            allTags  : allTags,
             writePost: writePost,
             resetPost: resetPost
         };

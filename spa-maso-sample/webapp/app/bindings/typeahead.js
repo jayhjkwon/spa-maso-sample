@@ -2,30 +2,30 @@
 	['jquery', 'bootstrap', 'knockout'],
 	function ($, bootstrap, ko) {
 	    var
-	        source = [
-	        "ActionScript",
-	        "AppleScript",
-	        "Asp",
-	        "BASIC",
-	        "C",
-	        "C++",
-	        "Clojure",
-	        "COBOL",
-	        "ColdFusion",
-	        "Erlang",
-	        "Fortran",
-	        "Groovy",
-	        "Haskell",
-	        "Java",
-	        "JavaScript",
-	        "Lisp",
-	        "Perl",
-	        "PHP",
-	        "Python",
-	        "Ruby",
-	        "Scala",
-	        "Scheme"
-	        ],
+	        //source = [
+	        //"ActionScript",
+	        //"AppleScript",
+	        //"Asp",
+	        //"BASIC",
+	        //"C",
+	        //"C++",
+	        //"Clojure",
+	        //"COBOL",
+	        //"ColdFusion",
+	        //"Erlang",
+	        //"Fortran",
+	        //"Groovy",
+	        //"Haskell",
+	        //"Java",
+	        //"JavaScript",
+	        //"Lisp",
+	        //"Perl",
+	        //"PHP",
+	        //"Python",
+	        //"Ruby",
+	        //"Scala",
+	        //"Scheme"
+	        //],
 
             extractor = function (query) {
                 var result = /([^,]+)$/.exec(query);
@@ -36,6 +36,8 @@
 
 	    ko.bindingHandlers.typeahead = {
 	        init: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+
+	            var source = ko.utils.unwrapObservable(valueAccessor()).source;
 
 	            $(element).typeahead({
 	                source: source,
