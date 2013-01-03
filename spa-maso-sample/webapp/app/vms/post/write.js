@@ -33,10 +33,11 @@
 
                 var tagArray = [];
 
-                return $.map(tagString.split(","), function (val) {
+                $.map(tagString.split(","), function (val) {
                     if ($.trim(val) !== '')
                         return tagArray.push({ tagText: $.trim(val) });
                 });
+                return tagArray;
             },
 
             resetPost = function () {

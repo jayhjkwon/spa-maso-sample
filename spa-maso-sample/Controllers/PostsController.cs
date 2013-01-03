@@ -19,7 +19,11 @@ namespace SpaMasoSample.Controllers
         // GET api/Posts
         public IEnumerable<Post> GetPosts()
         {
-            var posts = _db.Posts.Include(p => p.Tags).Include(p => p.Comments).AsEnumerable();
+            var posts = _db.Posts
+                            .Include(p => p.Tags)
+                            .Include(p => p.Comments)
+                            .OrderByDescending(p => p.DateCreated)
+                            .AsEnumerable();
             return posts;
         }
 
