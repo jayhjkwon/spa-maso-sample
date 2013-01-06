@@ -1,6 +1,6 @@
 define(
-    ['nls/nls', 'infra/store', 'knockout', './post/detail', 'nls/nls'],
-    function (resources, store, ko, detail, resources) {
+    ['infra/store', 'knockout', './post/detail', 'nls/nls'],
+    function (store, ko, detail, resources) {
         var
             labelHome     = resources.labelHome,
             labelNewPost  = resources.labelNewPost,
