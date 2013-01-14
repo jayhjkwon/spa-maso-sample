@@ -20,6 +20,12 @@
                     dataType: 'json',
                     type: 'POST'
                 });
+                
+                amplify.request.define('updatePost', 'ajax', {
+                    url: 'api/posts',
+                    dataType: 'json',
+                    type: 'PUT'
+                });
             };
 
 

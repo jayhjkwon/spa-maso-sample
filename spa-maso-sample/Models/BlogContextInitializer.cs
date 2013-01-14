@@ -15,10 +15,10 @@ namespace SpaMasoSample.Models
             var gen = new NLipsum.Core.LipsumGenerator();
 
             // tags
-            var tag1 = new Tag {Id = 1, TagText = "asp.net"};
+            var tag1 = new Tag {Id = 1, TagText = "aspnet-webapi"};
             var tag2 = new Tag {Id = 2, TagText = "javascript"};
             var tag3 = new Tag {Id = 3, TagText = "knockoutjs"};
-            var tag4 = new Tag { Id = 4, TagText   = "AppleScript" };
+            var tag4 = new Tag { Id = 4, TagText   = "NodeJS" };
             var tag5 = new Tag { Id = 5, TagText   = "Asp" };
             var tag6 = new Tag { Id = 6, TagText   = "BASIC" };
             var tag7 = new Tag { Id = 7, TagText   = "C" };
@@ -61,22 +61,28 @@ namespace SpaMasoSample.Models
                     {
                         Id          = 1,
                         Title       = "A Few New Things Coming To JavaScript",
-                        Content     = string.Join(" ", gen.GenerateParagraphs(5)),
+                        Content     = string.Join(" ", gen.GenerateParagraphs(2)),
                         DateCreated = DateTime.Now,
                         Comments    = new List<Comment>
                             {
                                 new Comment
                                     {
-                                        CommenterName = "Scott Hanselman",
-                                        CommentText   = "Hello Ray, this is really great post.",
+                                        CommenterName = "Sungki Kim",
+                                        CommentText   = "I hava a question, can I email to you? I work too much, even weekend I have to go to the company. Are there any opportunities in your company?",
                                         CommentTime   = DateTime.Now
                                     },
                                 new Comment
                                     {
-                                        CommenterName = "Scott Guthrie",
-                                        CommentText   = "I hava a question, can I email to you?",
+                                        CommenterName = "Sujin Lee",
+                                        CommentText   = "Hello Ray, this is really great post, Awesome. I love U",
                                         CommentTime   = DateTime.Now
-                                    }
+                                    },
+                                new Comment
+                                {
+                                    CommenterName = "Keungyoung Kim",
+                                    CommentText   = "How are you doing, Ray? I love to go to Luxembourg ASAP. Anyway when do we start MyStory.SPA project?",
+                                    CommentTime   = DateTime.Now
+                                }
                             }
                     };
             post1.Tags.Add(tag1);

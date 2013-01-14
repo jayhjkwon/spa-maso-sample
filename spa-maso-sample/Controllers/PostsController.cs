@@ -53,27 +53,16 @@ namespace SpaMasoSample.Controllers
         }
 
         // PUT api/Posts/5
-        public HttpResponseMessage PutPost(int id, Post post)
+        public HttpResponseMessage PutPost(Post post)
         {
-            if (!ModelState.IsValid || id != post.Id)
-            {
-                return Request.CreateResponse(HttpStatusCode.BadRequest);
-            }
-            else
-            {
-                _db.Entry(post).State = EntityState.Modified;
+            //_db.Entry(post).State = EntityState.Modified;
+            var postDb = _db.Posts.Find(post.Id);
+            postDb.Tags = post.Tags;
+            _db.Entry(postDb).CurrentValues.SetValues(post);
+            UpdateTag(postDb);
+            _db.SaveChanges();
 
-                try
-                {
-                    _db.SaveChanges();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    return Request.CreateResponse(HttpStatusCode.NotFound);
-                }
-
-                return Request.CreateResponse(HttpStatusCode.OK);
-            }
+            return Request.CreateResponse(HttpStatusCode.OK);
         }
 
         // DELETE api/Posts/5
@@ -111,10 +100,10 @@ namespace SpaMasoSample.Controllers
 
                 if (!string.IsNullOrWhiteSpace(tagText))
                 {
-                    var cnt = _db.Tags.Count(t => t.TagText == tagText);
-                    if (cnt > 0)
+                    var tagDb = _db.Tags.FirstOrDefault(t => t.TagText == tagText);
+                    if (tagDb != null)
                     {
-                        post.Tags.Add(_db.Tags.First(t => t.TagText == tagText));
+                        post.Tags.Add(tagDb);
                     }
                     else
                     {

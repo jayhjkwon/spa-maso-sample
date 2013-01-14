@@ -14,10 +14,10 @@
         
         <div>
             <input type="text" 
-                data-provide="typeahead"
-                data-bind="typeahead: {}, value: tagText"
-                class="input-block-level" 
-                placeholder = "Tag, Use comma delimiter for multiple tags" />
+                   data-provide="typeahead"
+                   data-bind="typeahead: {source: allTags}, value: tagText"
+                   class="input-block-level" 
+                   placeholder = "Tag, Use comma delimiter for multiple tags" />
         </div>
 
         <div class="form-actions" align="center">
