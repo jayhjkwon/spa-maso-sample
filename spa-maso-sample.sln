@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spa-maso-sample", "spa-maso-sample\spa-maso-sample.csproj", "{46E02D27-59E6-4B67-ADAF-588DF482B7EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F5A6DB25-644D-40B7-B7F1-5E04E9026546}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{81AF185F-B967-49C7-A421-8CE6A410001C}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46E02D27-59E6-4B67-ADAF-588DF482B7EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46E02D27-59E6-4B67-ADAF-588DF482B7EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46E02D27-59E6-4B67-ADAF-588DF482B7EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46E02D27-59E6-4B67-ADAF-588DF482B7EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
