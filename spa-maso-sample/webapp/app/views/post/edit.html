@@ -1,0 +1,28 @@
+﻿<section id="section-post-edit" class="view">
+    <div class="page-header">
+        <h3>Edit Post</h3>
+    </div>
+    
+    <form>
+        <div>
+            <input data-bind="value: title" type="text" class="input-block-level" placeholder="Title" autofocus />
+        </div>
+
+        <div>
+            <textarea data-bind="value: content" class="input-block-level" rows="15"></textarea>
+        </div>
+        
+        <div>
+            <input id="tag" type="text" 
+                   data-provide="typeahead"
+                   data-bind="typeahead: {source: allTags}, value: tagText"
+                   class="input-block-level" 
+                   placeholder = "Tag, Use comma delimiter for multiple tags" />
+        </div>
+
+        <div class="form-actions" align="center">
+            <button data-bind="click: updatePost" type="button" class="btn btn-primary">Save</button>
+            <button data-bind="click: resetPost" type="button" class="btn">Reset</button>
+        </div>
+    </form>
+</section>

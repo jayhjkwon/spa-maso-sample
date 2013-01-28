@@ -1,0 +1,37 @@
+
+{
+    "name": "amplify",
+    "version": "1.1.0",
+    "description": "AmplifyJS is a set of components for data management and application communication.",
+    "categories": [
+        "Events",
+        "Utilities",
+        "AJAX & Websockets",
+        "Shims"
+    ],
+    "author": {
+        "name": "appendto"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/appendto/amplify"
+    },
+    "bugs": {
+        "web": "https://github.com/appendto/amplify/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/appendto/amplify/blob/master/MIT-LICENSE.txt"
+        },
+        {
+            "type": "GPL",
+            "url": "https://github.com/appendto/amplify/blob/master/GPL-LICENSE.txt"
+        }
+    ],
+    "main": "amplify.js",
+    "dependencies": {
+        "jquery": ">1.4.0"
+    }
+
+}

@@ -1,0 +1,28 @@
+﻿<section id="section-post-write" class="view">
+    <div class="page-header">
+        <h3>New Post</h3>
+    </div>
+
+    <form data-bind="validatePost:{}">
+        <div>
+            <input data-bind="value: title" type="text" name="title" class="input-block-level" placeholder="Title" autofocus />
+        </div>
+
+        <div>
+            <textarea data-bind="value: content" name="content" class="input-block-level" rows="15"></textarea>
+        </div>
+        
+        <div>
+            <input type="text" 
+                data-provide="typeahead"
+                data-bind="typeahead:{source: allTags}, value: tags"
+                class="input-block-level" 
+                placeholder = "Tag, Use comma delimiter for multiple tags" />
+        </div>
+
+        <div class="form-actions" align="center">
+            <button data-bind="click: writePost" type="button" class="btn btn-primary">Save</button>
+            <button data-bind="click: resetPost" type="button" class="btn">Reset</button>
+        </div>
+    </form>
+</section>

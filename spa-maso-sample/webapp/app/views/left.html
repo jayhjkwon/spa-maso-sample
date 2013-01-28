@@ -1,0 +1,12 @@
+<div id="left-div">
+    <ul id="nav-items" class="nav nav-list" data-bind="foreach: filteredPosts">
+        <li data-bind="setActive:{}">
+            <a data-bind="attr: {href: url}">
+                <label data-bind="text: shortTitle"></label>
+                <div class="date-created" >
+                    <i class="icon-time"></i><label data-bind="text: yyyymmdd"></label>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

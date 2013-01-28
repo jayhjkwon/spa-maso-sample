@@ -1,0 +1,44 @@
+﻿<section id="referral-div" class="view">
+    <h2>Referral</h2>
+
+    <div>
+        <input type="text" data-bind="value: referralName"/>
+        <input type="text" data-bind="value: type"/>
+        <button id="btnSave" data-bind="click: saveReferral, enable: !isBusy(), text: saveLabel"></button>
+        <button id="btnDelete" type="button">delete</button>
+        <button id="btnEdit" type="button" data-bind="bsButton: {}">edit</button>
+        <button type="button" class="btn btn-primary" data-complete-text="finished!">Single Toggle</button>
+        <div class="btn-group pull-right nav-tabs" data-toggle="buttons-radio">
+          <button class="btn" value="60">Hour</button>
+          <button class="btn" value="1440">Day</button>
+          <button class="btn" value="10080">Week</button>
+          <button class="btn" value="43200">30 Day</button>
+        </div>
+        <button id="btnLoading" type="button" class="btn" data-loading-text="loading stuff..." data-bind="loadingButton:{}" >...</button>
+    </div>
+
+    <div>
+        <input type="text" data-bind="value: searchText, valueUpdate: 'afterKeydown', ebable: !isBusy()"
+               placeholder="Referral Name, Type"/>
+        <button data-bind="button: {labelText: buttonSearch}, click: loadReferrals, enable: !isBusy()"></button>
+
+        <ul id="referrals" data-bind="foreach: referralList">
+            <li>
+                <label data-bind="text: id"></label>
+                :&nbsp;
+                <!--<label data-bind="text: referralName"></label>-->
+                <!--<label data-bind="text: '.' + type()"></label>-->
+                <label data-bind="text: fileName, click: $parent.onFileNameClick"></label>
+                <!-- ko if: $data.documents -->
+                <ul data-bind="foreach: documents">
+                    <li>
+                        <!--<label data-bind="text: title"></label>&nbsp;:&nbsp;-->
+                        <!--<label data-bind="text: description"></label>&nbsp;&nbsp;-->
+                        <label data-bind="text: summary"></label>
+                    </li>
+                </ul>
+                <!-- /ko -->
+            </li>
+        </ul>
+    </div>
+</section>

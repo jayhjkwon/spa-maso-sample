@@ -1,0 +1,13 @@
+{
+    "name": "activity",
+    "version": "0.0.1",
+    "description": "activity indicator",
+    "homepage": "https://github.com/neteye/jquery-plugins",
+    "main": "activity-indicator.js",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/mit-license.php"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+#left-div {
+  /*ul {
+		margin: 0;
+		padding: 0;
+
+        li {
+			margin: 5px;
+            width: 100%;
+			border: 1px solid;
+        }
+    }*/
+
+}
+#left-div .nav a {
+  color: #000;
+  font-weight: bold;
+  height: 50px;
+  border: 1px solid;
+  margin: 10px 1px;
+  border-radius: 3px;
+}
