@@ -26,9 +26,7 @@ This sample project is to show one of the many ways to develop single page appli
 * Ray Kwon ([@nicekhj](https://twitter.com/nicekhj))
 
 ## Welcome
-I am a just lousy coder :)
-
-There are still lots of code to fix, add and improve.
+I am a just lousy coder :)  and there are still lots of code to fix, add and improve.
 
 Please feel free to make the source code better by forking and sending pull request.
 
