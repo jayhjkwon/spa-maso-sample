@@ -1,4 +1,4 @@
-# Single Page Application sample project for the Microsoftware Feb-Mar in 2013
+# Single Page Application sample project for the Microsoftware Feb-Mar, 2013
 
 This sample project is to show one of the many ways to develop single page application using following tools, libraries and frameworks :
 
