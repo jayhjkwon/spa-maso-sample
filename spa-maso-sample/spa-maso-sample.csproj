@@ -884,9 +884,6 @@
     <Content Include="webapp\app\styles\post.detail.less" />
     <Content Include="webapp\app\styles\post.write.less" />
     <Content Include="webapp\app\styles\post.edit.less" />
-    <Content Include="webapp\app\app.min.js.map">
-      <DependentUpon>app.js</DependentUpon>
-    </Content>
     <Content Include="webapp\app\jam\moment\.jamignore" />
     <Content Include="webapp\app\jam\moment\.jshintrc" />
     <Content Include="webapp\app\jam\moment\.travis.yml" />
