@@ -1,3 +1,0 @@
-echo Compile LESS......
-lessc ../../app/styles/style.less ../../app/styles/style.css
-echo Compiling LESS completed!
