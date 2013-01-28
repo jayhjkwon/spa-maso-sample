@@ -28,15 +28,11 @@ namespace SpaMasoSample.Controllers
         }
 
         // GET api/Posts/5
-        public Post GetPost(int id)
+        public Post GetPost(string id)
         {
-            var post = _db.Posts.Include(p => p.Tags).Include(p => p.Comments).FirstOrDefault(p => p.Id.Equals(id));
-            if (post == null)
-            {
-                throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
-            }
-
-            return post;
+            var post = _db.Posts.Include(p => p.Tags).Include(p => p.Comments).FirstOrDefault(p => p.Id == new Guid(id));
+            if(post!=null) return post;
+            throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.NotFound));
         }
 
         // POST api/Posts
@@ -44,6 +40,7 @@ namespace SpaMasoSample.Controllers
         {
             post.DateCreated = DateTime.Now;
             UpdateTag(post);
+            post.Id = Guid.NewGuid();
             _db.Posts.Add(post);
             _db.SaveChanges();
 
@@ -52,23 +49,10 @@ namespace SpaMasoSample.Controllers
             return response;
         }
 
-        // PUT api/Posts/5
-        public HttpResponseMessage PutPost(Post post)
-        {
-            //_db.Entry(post).State = EntityState.Modified;
-            var postDb = _db.Posts.Find(post.Id);
-            postDb.Tags = post.Tags;
-            _db.Entry(postDb).CurrentValues.SetValues(post);
-            UpdateTag(postDb);
-            _db.SaveChanges();
-
-            return Request.CreateResponse(HttpStatusCode.OK);
-        }
-
         // DELETE api/Posts/5
-        public HttpResponseMessage DeletePost(int id)
+        public HttpResponseMessage DeletePost(string id)
         {
-            var post = _db.Posts.Find(id);
+            var post = _db.Posts.FirstOrDefault(p => p.Id == new Guid(id));
             if (post == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
@@ -88,8 +72,20 @@ namespace SpaMasoSample.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, post);
         }
 
+        // PUT api/Posts/5
+        public HttpResponseMessage PutPost(Post post)
+        {
+            _db.Posts.Remove(_db.Posts.Include(p => p.Tags).Include(p => p.Comments).SingleOrDefault(p => p.Id == post.Id));
+            post.Id = post.Id;
+            UpdateTag(post);
+            _db.Posts.Add(post);
+            _db.SaveChanges();
+            return Request.CreateResponse(HttpStatusCode.OK);
+        }
+
+
         // update or insert tag depend if tag exist or not
-        private void UpdateTag(Post post)
+        private Post UpdateTag(Post post)
         {
             var tagList = post.Tags.ToList();
             post.Tags.Clear();
@@ -103,14 +99,16 @@ namespace SpaMasoSample.Controllers
                     var tagDb = _db.Tags.FirstOrDefault(t => t.TagText == tagText);
                     if (tagDb != null)
                     {
-                        post.Tags.Add(tagDb);
+                        post.Tags.Add(tagDb);         
                     }
                     else
                     {
-                        post.Tags.Add(new Tag { TagText = tagText });
+                        post.Tags.Add(new Tag{ TagText = tagText });
                     }
                 }
             }
+
+            return post;
         }
 
         protected override void Dispose(bool disposing)

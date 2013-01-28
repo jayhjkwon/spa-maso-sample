@@ -27,7 +27,7 @@
                 postEdit  : '#/post/edit/:id'
             },
 
-            locale = 'en';  // 'ko-kr' for Korean, 'en' for English
+            locale = 'en',  // 'ko-kr' for Korean, 'en' for English
 
             useMock = false;     // use mock request, not real request
 

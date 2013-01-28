@@ -1,6 +1,6 @@
 define(
-    ['jquery', 'underscore', 'knockout', 'knockout.mapping', 'data/data', 'infra/store', 'infra/util', 'nls/nls', 'models/models', './top'],
-    function ($, _, ko, mapping, data, store, util, resources, models, top) {
+    ['jquery', 'underscore', 'knockout', 'knockout.mapping', 'data/data', 'infra/store', 'infra/util', 'nls/nls', 'models/models', './top', './post/edit'],
+    function ($, _, ko, mapping, data, store, util, resources, models, top, edit) {
         var
             searchText        = ko.observable(''),
             posts             = ko.observableArray([]),
@@ -31,6 +31,13 @@ define(
 
         top.searchText.subscribe(function (newValue) {
             searchText(newValue);
+        });
+
+        edit.title.subscribe(function (newTitle) {
+            var editedPost = _.find(posts(), function (post) {
+                return post.id() === edit.id();
+            });
+            editedPost.title(newTitle);
         });
 
         return {

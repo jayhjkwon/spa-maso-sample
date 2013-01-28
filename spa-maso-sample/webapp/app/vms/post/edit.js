@@ -69,13 +69,16 @@
                     dateCreated : dateCreated(),
                     tags        : tags()
                 }))
+                .fail(function(){
+                    console.log('error occured');
+                })
                 .done(function (result) {
                     router.navigateTo('#/post/detail/' + id());
                 });
             },
             
             getTagAsArray = function (tagString) {
-                if (!tagString) return false;
+                if (!tagString) return [];
 
                 var tagArray = [];
 

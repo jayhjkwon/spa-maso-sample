@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -14,7 +15,8 @@ namespace SpaMasoSample.Models
             this.Tags = new List<Tag>();
             this.Comments = new List<Comment>();
         }
-        public int Id { get; set; }
+        [DatabaseGenerated(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None)]
+        public Guid Id { get; set; }
 
         [Required]
         [MaxLength(125)]

@@ -59,7 +59,7 @@ namespace SpaMasoSample.Models
             var post1 = 
                 new Post
                     {
-                        Id          = 1,
+                        Id          = Guid.NewGuid(),
                         Title       = "A Few New Things Coming To JavaScript",
                         Content     = string.Join(" ", gen.GenerateParagraphs(2)),
                         DateCreated = DateTime.Now,
@@ -94,7 +94,7 @@ namespace SpaMasoSample.Models
             var post2 = 
                 new Post
                 {
-                    Id          = 2,
+                    Id          = Guid.NewGuid(),
                     Title       = "Writing Fast, Memory-Efficient JavaScript",
                     Content     = string.Join(" ", gen.GenerateParagraphs(5)),
                     DateCreated = DateTime.Now,
@@ -121,7 +121,7 @@ namespace SpaMasoSample.Models
             var post3 = 
                 new Post
                 {
-                    Id          = 3,
+                    Id          = Guid.NewGuid(),
                     Title       = "Understanding MVVM – A Guide For JavaScript Developers",
                     Content     = string.Join(" ", gen.GenerateParagraphs(5)),
                     DateCreated = DateTime.Now
@@ -132,7 +132,7 @@ namespace SpaMasoSample.Models
             var post4 = 
                 new Post
                 {
-                    Id          = 4,
+                    Id          = Guid.NewGuid(),
                     Title       = "Node.js development with WebMatrix 2 and Express",
                     Content     = string.Join(" ", gen.GenerateParagraphs(5)),
                     DateCreated = DateTime.Now,
@@ -160,7 +160,7 @@ namespace SpaMasoSample.Models
             var post5 = 
                 new Post
                 {
-                    Id          = 5,
+                    Id          = Guid.NewGuid(),
                     Title       = "Knockout.js with Steven Sanderson",
                     Content     = string.Join(" ", gen.GenerateParagraphs(5)),
                     DateCreated = DateTime.Now,
@@ -185,7 +185,7 @@ namespace SpaMasoSample.Models
             var post6 =
                 new Post
                 {
-                    Id          = 6,
+                    Id          = Guid.NewGuid(),
                     Title       = "Design Patterns in Javascript",
                     Content     = string.Join(" ", gen.GenerateParagraphs(5)),
                     DateCreated = DateTime.Now
@@ -196,7 +196,7 @@ namespace SpaMasoSample.Models
             var post7 =
                 new Post
                 {
-                    Id          = 7,
+                    Id          = Guid.NewGuid(),
                     Title       = "Building Mobile JavaScript WebApps With Backbone.js",
                     Content     = string.Join(" ", gen.GenerateParagraphs(5)),
                     DateCreated = DateTime.Now,
