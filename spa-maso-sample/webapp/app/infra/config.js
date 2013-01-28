@@ -29,7 +29,9 @@
 
             locale = 'en',  // 'ko-kr' for Korean, 'en' for English
 
-            useMock = false;     // use mock request, not real request
+            useMock = true;     // use mock request, not real request
+
+        var test = 'test';
 
         return {
             viewPanels     : viewPanels,

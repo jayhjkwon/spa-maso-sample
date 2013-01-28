@@ -1,0 +1,144 @@
+/* Common less variables
+-----------------------------------------------------------*/
+/* Common less mixins
+-----------------------------------------------------------*/
+.base-font {
+  font-family: Arial, "Segoe UI", Verdana, Helvetica, Sans-Serif;
+  font-size: 14px;
+  color: #232323;
+}
+/* Common styles
+-----------------------------------------------------------*/
+.view {
+  display: none;
+}
+/* busy indicator */
+/*.modal {
+  position  : fixed;
+  z-index   : 1000;
+  top       : 0;
+  left      : 0;
+  right     : 0;
+  bottom    : 0;
+  background: rgba( 0, 0, 0, .1 ) url(../images/ajax-loader-5.gif) 50% 50% no-repeat;
+  cursor    : wait;
+}*/
+/* end - busy indicator */
+/* validation style */
+label.valid {
+  width: 24px;
+  height: 24px;
+  background: url(../images/valid.png) center center no-repeat;
+  display: inline-block;
+  text-indent: -9999px;
+}
+label.error {
+  font-weight: bold;
+  color: red;
+  padding: 2px 8px;
+  margin-top: -10px;
+}
+/* end - validation style */
+/* page layout
+-----------------------------------------------------------*/
+div#left {
+  position: absolute;
+  top: 41px;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  background-color: #ffffff;
+  overflow-y: auto;
+  -webkit-box-shadow: 0 0 5px 2px #888888;
+  -moz-box-shadow: 0 0 5px 2px #888888;
+  box-shadow: 0 0 5px 2px #888888;
+  z-index: 100;
+}
+div#main {
+  position: absolute;
+  top: 41px;
+  right: 0;
+  bottom: 0;
+  left: 300px;
+  background-color: #ffffff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px;
+}
+#nav-div .navbar-search {
+  margin-left: 50px;
+}
+#left-div .nav-list > .active > a {
+  background-color: #3db1eb;
+  background-image: -moz-linear-gradient(top, #66ccff, #0088cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#66ccff), to(#0088cc));
+  background-image: -webkit-linear-gradient(top, #66ccff, #0088cc);
+  background-image: -o-linear-gradient(top, #66ccff, #0088cc);
+  background-image: linear-gradient(to bottom, #66ccff, #0088cc);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff66ccff', endColorstr='#ff0088cc', GradientType=0);
+}
+#left-div .nav li label {
+  cursor: pointer;
+}
+#left-div .nav a {
+  color: #000;
+  height: 80px;
+  border: 1px solid #e6e6e6;
+  margin: 10px -3px;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px #999999;
+  -moz-box-shadow: 0 0 5px #999999;
+  box-shadow: 0 0 5px #999999;
+}
+#left-div .nav a label {
+  font-weight: bold;
+}
+#left-div .nav a div.date-created {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+#left-div .nav a div.date-created label {
+  display: inline;
+  font-weight: normal;
+}
+#section-post-detail div.time-created {
+  margin-top: 30px;
+}
+#section-post-detail div.tags {
+  margin-top: 10px;
+}
+#section-post-detail div.comments {
+  margin-top: 15px;
+}
+#section-post-detail div.comments table {
+  margin-top: 10px;
+}
+#section-post-detail div.comments table td {
+  width: 100%;
+}
+#section-post-detail div.write-comment input[type=text] {
+  font-size: 1em;
+}
+#section-post-write input[type=text] {
+  font-size: 1em;
+}
+#section-post-edit input[type=text] {
+  font-size: 1em;
+}
+input[type=text] {
+  font-size: 20px;
+  color: #710909;
+}
+input[type=button] {
+  color: black;
+}
+.hello {
+  font-size: 30px;
+  color: yellow;
+}

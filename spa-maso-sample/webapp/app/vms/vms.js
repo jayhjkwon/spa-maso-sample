@@ -1,6 +1,6 @@
 ﻿define(
-    ['./top', './left', './post/detail', './post/write', './post/edit'],
-    function(top, left, postDetail, postWrite, postEdit) {
+    ['./post/detail', './post/write', './post/edit', './top', './left'],
+    function (postDetail, postWrite, postEdit, top, left) {
         return {
             top       : top,
             left      : left,

@@ -21,9 +21,11 @@ define(
             }
         ;
 
-        detail.post.subscribe(function (post) {
-            id(post.id());
-        });
+        if (detail) {
+            detail.post.subscribe(function (post) {
+                id(post.id());
+            });
+        }
 
         return {
             labelHome     : labelHome,    

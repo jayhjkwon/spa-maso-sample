@@ -28,14 +28,17 @@
         'infra/config',
         'infra/routing.tables',
         'bindings/bindings',
-        'data/mock/mocks'
+        'data/mock/mocks',
+        'bootstrap'
     ],
-        function (dom, $, router, config, tables, bindings, mocks) {
+        function (dom, $, router, config, tables, bindings, mocks, bootstrap) {
             var
                 init = function () {
                     if (config.useMock) {
                         mocks.init();
                     }
+
+                    $('#noticePopup').modal();
                 };
 
             init();

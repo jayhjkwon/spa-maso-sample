@@ -29,15 +29,19 @@ define(
             }            
         ;
 
-        top.searchText.subscribe(function (newValue) {
-            searchText(newValue);
-        });
+        if (top) {
+            top.searchText.subscribe(function (newValue) {
+                searchText(newValue);
+            });
+        }
 
         edit.title.subscribe(function (newTitle) {
             var editedPost = _.find(posts(), function (post) {
                 return post.id() === edit.id();
             });
-            editedPost.title(newTitle);
+            if (editedPost) {
+                editedPost.title(newTitle);
+            }
         });
 
         return {
