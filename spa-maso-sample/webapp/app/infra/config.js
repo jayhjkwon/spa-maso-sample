@@ -31,8 +31,6 @@
 
             useMock = true;     // use mock request, not real request
 
-        var test = 'test';
-
         return {
             viewPanels     : viewPanels,
             viewIds        : viewIds,
