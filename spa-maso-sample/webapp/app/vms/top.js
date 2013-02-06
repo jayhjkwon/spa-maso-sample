@@ -1,6 +1,6 @@
 define(
-    ['infra/store', 'knockout', './post/detail', 'nls/nls', 'amplify', 'infra/config'],
-    function (store, ko, detail, resources, amplify, config) {
+    ['knockout', './post/detail', 'nls/nls', 'amplify', 'infra/config'],
+    function (ko, detail, resources, amplify, config) {
         var
             labelHome     = resources.labelHome,
             labelNewPost  = resources.labelNewPost,
@@ -12,11 +12,11 @@ define(
             searchText    = ko.observable(''),
             id            = ko.observable(''),
             useEnglish    = function () {
-                store.save('locale', 'en');
+                amplify.store(config.storeKeys.locale, 'en', config.storeExpiration);
                 window.location.reload();
             },
             useKorean     = function () {
-                store.save('locale', 'ko-kr');
+                amplify.store(config.storeKeys.locale, 'ko-kr', config.storeExpiration);
                 window.location.reload();
             }
         ;

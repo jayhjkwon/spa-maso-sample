@@ -1,6 +1,6 @@
 ﻿define(
-    ['jquery', 'underscore', 'knockout', 'sammy', './config', './presenter'],
-    function ($, _, ko, sammy, config, presenter) {
+    ['jquery', 'underscore', 'knockout', 'sammy', './config', './presenter', 'amplify'],
+    function ($, _, ko, sammy, config, presenter, amplify) {
         var
             app = Sammy(function () { }),
 
@@ -31,6 +31,7 @@
                                 if (table.callback) {
                                     table.callback(context.params);
                                 }
+                                amplify.store(config.storeKeys.lastUrl, context.path, config.storeExpiration);
                             });
                         });
                     } else {
@@ -46,7 +47,9 @@
 
             run = function (routingTables) {
                 registerTables(routingTables);
-                app.run(config.hashes.home);
+
+                // first use hash url if user provided, otherwise use url stored in client, otherwise use home url
+                app.run( app.getLocation() || amplify.store(config.storeKeys.lastUrl) || config.hashes.home);
             };
 
 

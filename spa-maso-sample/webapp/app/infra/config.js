@@ -32,6 +32,11 @@
                 currentPost: 'CURRENT_POST'
             },
 
+            storeKeys = {
+                lastUrl: 'LAST_URL',
+                locale : 'LOCALE'
+            }
+
             locale = 'en',  // 'ko-kr' for Korean, 'en' for English
 
             useMock = false;     // use mock request, not real request
@@ -43,7 +48,8 @@
             storeExpiration: storeExpiration,
             locale         : locale,
             useMock        : useMock,
-            topics         : topics
+            topics         : topics,
+            storeKeys      : storeKeys
         };
     }
 );

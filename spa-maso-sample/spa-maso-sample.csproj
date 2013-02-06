@@ -229,7 +229,6 @@
     <Content Include="webapp\app\infra\presenter.js" />
     <Content Include="webapp\app\infra\router.js" />
     <Content Include="webapp\app\infra\routing.tables.js" />
-    <Content Include="webapp\app\infra\store.js" />
     <Content Include="webapp\app\infra\util.js" />
     <Content Include="webapp\app\jam\amplify\amplify.js" />
     <Content Include="webapp\app\jam\bootstrap\.issue-guidelines.js" />
@@ -325,6 +324,9 @@
     <Content Include="webapp\app\jam\domReady\domReady.js" />
     <Content Include="webapp\app\jam\i18n\i18n.js" />
     <Content Include="webapp\app\jam\jquery-validation\jquery.validate.js" />
+    <Content Include="webapp\app\app.min.js.map">
+      <DependentUpon>app.js</DependentUpon>
+    </Content>
     <None Include="webapp\app\jam\jquery\jquery.intellisense.js" />
     <Content Include="webapp\app\jam\jquery\jquery.js" />
     <Content Include="webapp\app\jam\knockout.mapping\knockout.mapping.js" />

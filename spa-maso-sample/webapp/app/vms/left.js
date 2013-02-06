@@ -1,6 +1,6 @@
 define(
-    ['jquery', 'underscore', 'knockout', 'knockout.mapping', 'data/data', 'infra/store', 'infra/util', 'nls/nls', 'models/models', './top', './post/edit', 'amplify', 'infra/config'],
-    function ($, _, ko, mapping, data, store, util, resources, models, top, edit, amplify, config) {
+    ['jquery', 'underscore', 'knockout', 'knockout.mapping', 'data/data', 'infra/util', 'nls/nls', 'models/models', './top', './post/edit', 'amplify', 'infra/config'],
+    function ($, _, ko, mapping, data, util, resources, models, top, edit, amplify, config) {
         var
             searchText        = ko.observable(''),
             posts             = ko.observableArray([]),

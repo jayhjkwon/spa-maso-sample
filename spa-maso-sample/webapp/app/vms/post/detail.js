@@ -1,6 +1,6 @@
 ﻿define(
-    ['jquery', 'knockout', 'knockout.mapping', 'data/data', 'infra/store', 'infra/util', 'nls/nls', 'models/models', 'moment', 'amplify', 'infra/config'],
-    function ($, ko, mapping, data, store, util, resources, models, moment, amplify, config) {
+    ['jquery', 'knockout', 'knockout.mapping', 'data/data', 'infra/util', 'nls/nls', 'models/models', 'moment', 'amplify', 'infra/config'],
+    function ($, ko, mapping, data, util, resources, models, moment, amplify, config) {
         var
             post          = ko.observable(),
             commenterName = ko.observable(),

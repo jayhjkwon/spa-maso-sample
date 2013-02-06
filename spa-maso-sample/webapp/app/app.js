@@ -36,9 +36,8 @@
                 init = function () {
                     if (config.useMock) {
                         mocks.init();
-                    }
-
-                    $('#noticePopup').modal();
+                        $('#noticePopup').modal();
+                    }                    
                 };
 
             init();
