@@ -1,6 +1,6 @@
 define(
-    ['infra/store', 'knockout', './post/detail', 'nls/nls'],
-    function (store, ko, detail, resources) {
+    ['infra/store', 'knockout', './post/detail', 'nls/nls', 'amplify', 'infra/config'],
+    function (store, ko, detail, resources, amplify, config) {
         var
             labelHome     = resources.labelHome,
             labelNewPost  = resources.labelNewPost,
@@ -21,11 +21,9 @@ define(
             }
         ;
 
-        if (detail) {
-            detail.post.subscribe(function (post) {
-                id(post.id());
-            });
-        }
+        amplify.subscribe(config.topics.currentPost, function (post) {
+            id(post.id());
+        });
 
         return {
             labelHome     : labelHome,    

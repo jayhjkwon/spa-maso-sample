@@ -1,6 +1,6 @@
 ﻿define(
-    ['jquery', 'knockout', 'knockout.mapping', 'data/data', 'infra/store', 'infra/util', 'nls/nls', 'models/models', 'moment'],
-    function ($, ko, mapping, data, store, util, resources, models, moment) {
+    ['jquery', 'knockout', 'knockout.mapping', 'data/data', 'infra/store', 'infra/util', 'nls/nls', 'models/models', 'moment', 'amplify', 'infra/config'],
+    function ($, ko, mapping, data, store, util, resources, models, moment, amplify, config) {
         var
             post          = ko.observable(),
             commenterName = ko.observable(),
@@ -19,6 +19,9 @@
                 $.when(data.deferredRequest('postDetail', { id: param.id }))
                     .done(function (result) {
                         post(mapping.fromJS(result, mappingOption));
+
+                        amplify.publish(config.topics.currentPost, post());
+
                         if ($.isFunction(param))
                             param(post());
                     })

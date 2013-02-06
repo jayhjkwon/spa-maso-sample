@@ -1,6 +1,6 @@
 ﻿define(
-    ['jquery', 'knockout', 'knockout.mapping', 'data/data', '../left', 'models/models', 'infra/router'],
-    function ($, ko, mapping, data, left, models, router) {
+    ['jquery', 'knockout', 'knockout.mapping', 'data/data', '../left', 'models/models', 'infra/router', 'infra/config', 'amplify'],
+    function ($, ko, mapping, data, left, models, router, config, amplify) {
         var
             id           = ko.observable(),
             title        = ko.observable(),
@@ -73,6 +73,7 @@
                     console.log('error occured');
                 })
                 .done(function (result) {
+                    amplify.publish(config.topics.postUpdated, { id: id, title: title });
                     router.navigateTo('#/post/detail/' + id());
                 });
             },
