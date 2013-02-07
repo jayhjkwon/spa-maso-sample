@@ -676,12 +676,13 @@
     <Content Include="webapp\app\vms\post\write.js" />
     <Content Include="webapp\app\vms\top.js" />
     <Content Include="webapp\app\vms\vms.js" />
-    <Content Include="webapp\tests\index.html" />
+    <Content Include="webapp\tests\test.html" />
     <Content Include="webapp\tests\qunit\qunit-composite.css" />
     <Content Include="webapp\tests\qunit\qunit-composite.js" />
     <Content Include="webapp\tests\qunit\qunit.css" />
     <Content Include="webapp\tests\qunit\qunit.js" />
     <Content Include="webapp\tests\vms\patients.js" />
+    <Content Include="webapp\tests\vms\post.test.js" />
     <Content Include="webapp\tests\vms\referrals.js" />
     <Content Include="webapp\tools\documentation\docs\api.js" />
     <Content Include="webapp\tools\documentation\docs\assets\css\external-small.png" />

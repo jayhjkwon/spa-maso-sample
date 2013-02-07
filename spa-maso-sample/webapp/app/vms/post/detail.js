@@ -11,7 +11,7 @@
                 }
             },
             
-            getPost = function (param) {
+            getPost = function (param, callback) {
                 if (!param.id)
                     return;
                 // TODO : raise an error message using toastr when no param.id provided
@@ -22,8 +22,8 @@
 
                         amplify.publish(config.topics.currentPost, post());
 
-                        if ($.isFunction(param))
-                            param(post());
+                        if ($.isFunction(callback))
+                            callback(post());
                     })
                     .fail(function (data, status) {
                         console.log('error: ' + status);
@@ -31,7 +31,7 @@
                 
             },
 
-            saveComment = function () {
+            saveComment = function (callback) {
                 $.when(data.deferredRequest('saveComment', {
                     commenterName: commenterName(),
                     commentText  : commentText()
@@ -42,6 +42,9 @@
                         commentText     : result.commentText,
                         commentTime     : result.commentTime
                     }));
+
+                    if ($.isFunction(callback))
+                        callback();
                 });
             }
         ;
