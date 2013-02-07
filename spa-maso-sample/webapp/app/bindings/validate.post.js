@@ -7,7 +7,8 @@ define(
                     {
                         rules:{
                             title:{
-                                required:true
+                                required: true,
+                                minlength : 5
                             },
                             content:{
                                 required:true
@@ -15,14 +16,12 @@ define(
                         },
                         messages:{
                             title:{
-                                required: resources.validationTitleRequired
+                                required: resources.validation.required.title,
+                                minlength: resources.validation.minlength.title
                             },
                             content:{
-                                required: resources.validationContentRequired
+                                required: resources.validation.required.content
                             }
-                        },
-                        success: function(label) {
-                            //label.text(resources.validationOK).addClass('valid');
                         },
                         highlight: function(el) {
                             $(el).fadeOut().fadeIn();
